@@ -5,7 +5,7 @@
 **Markdown** 也可以理解为将以 MARKDOWN 语法编写的语言转换成 HTML 内容的工具。
 
 #2 2. *谁*创造了它？
-它由 [**Aaron Swartz**](http://www.aaronsw.com/) 和 **John Gruber** 共同设计， **Aaron Swartz** 就是那位于去年（*2013年1月11日*）自杀,有着**开挂**一般人生经历的程序员。维基百科对他的[介绍](http://zh.wikipedia.org/wiki/%E4%BA%9A%E4%BC%A6%C2%B7%E6%96%AF%E6%B2%83%E8%8C%A8)是：**软件工程师、作家、政治组织者、互联网活动家、维基百科人**。
+它由 [**Aaron Swartz**](http://www.aaronsw.com/) 和 **John Gruber** 共同设计， **Aaron Swartz** 就是那位于去年（*2013年1月11日*）自杀、有着**开挂**一般人生经历的程序员。维基百科对他的[介绍](http://zh.wikipedia.org/wiki/%E4%BA%9A%E4%BC%A6%C2%B7%E6%96%AF%E6%B2%83%E8%8C%A8)是：**软件工程师、作家、政治组织者、互联网活动家、维基百科人**。
 
 他有着足以让你跪拜的人生经历：
 + **14岁**参与 RSS 1.0 规格标准的制订。
@@ -24,7 +24,7 @@
 + 兼容 HTML ，可以转换为 HTML 格式发布。
 + 跨平台使用。
 + 越来越多的网站支持 Markdown 。
-+ 更方便清晰地组织你的电子邮件。（ Markdown-here ,  Airmail ）
++ 更方便清晰地组织你的电子邮件。（ Markdown-here, Airmail ）
 + 摆脱 Word （我不是认真的）。
 
 #2 4. *怎么*使用？
@@ -67,7 +67,7 @@ Markdown 语法主要分为如下几大部分：
 段落的前后要有空行，所谓的空行是指没有文字内容。若想在段内强制换行的方式是使用**两个以上**空格加上回车（引用中换行省略回车）。
 
 #3 4.3 区块引用
-在段落的每行或者只在第一行使用符号`>`,还可使用多个嵌套引用，如：
+在段落的每行或者只在第一行使用符号`>`，还可使用多个嵌套引用，如：
 > \> 区块引用
 > \>> 嵌套引用
 
@@ -115,7 +115,7 @@ void main()
 > + 第二项
 > + 第三项
 
-有序列表的标记方式是将上述的符号换成数字,并辅以`.`，如：
+有序列表的标记方式是将上述的符号换成数字，并辅以`.`，如：
 > 1\. 第一项
 > 2\. 第二项
 > 3\. 第三项
@@ -197,8 +197,7 @@ Markdown 的使用者：
 
 ****
 **注意**：不同的 Markdown 解释器或工具对相应语法（扩展语法）的解释效果不尽相同，具体可参见工具的使用说明。
-虽然有人想出面搞一个所谓的标准化的 Markdown ，[没想到还惹怒了健在的创始人 John Gruber]
-(http://blog.codinghorror.com/standard-markdown-is-now-common-markdown/ )。
+虽然有人想出面搞一个所谓的标准化的 Markdown ，[没想到还惹怒了健在的创始人 John Gruber](http://blog.codinghorror.com/standard-markdown-is-now-common-markdown/)。
 ****
 以上基本是所有 traditonal markdown 的语法。
 

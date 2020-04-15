@@ -110,7 +110,8 @@ marked 是 github 上的一个开源项目，它是一个用 javascript 开发�
 
 3. 解压 docsify-kepan.zip ，把里面的文件全都复制到这个文件夹；
 
-4. 双击 server.exe 启动简单 Web 服务器；
+4. 双击 server.cmd 启动简单 Web 服务器，不要关闭命令窗口；
+关闭窗口，Web 服务就关闭了。
 
 5. 然后用浏览器访问 http://localhost 即可。
 
@@ -184,6 +185,18 @@ marked 是 github 上的一个开源项目，它是一个用 javascript 开发�
 如果还想进一步学习……
 
 内事不决问 [必应](https://bing.com) ，外事不决问 [谷歌](https://google.com) 。
+
+#3 用什么工具来编辑 md 文件方便呢？
+
+Markdown 语法非常简单，其实用记事本或者自己喜欢的任何编辑器手写都可以。
+
+如果你需要支持 Markdown 的语法高亮，或者实时预览功能的编辑器的话，也有不少，可以参考这篇文章：
+* [主流 Markdown 编辑器推荐](https://zhuanlan.zhihu.com/p/69210764)
+
+比方说，你可以使用 VSCode ：
+* [Visual Studio Code](https://code.visualstudio.com/)
+
+这些编辑器都没法识别 `#1、#2、#3、#4、#5、#6……#107、#108` 一百零八级标题方案，这是我们下一步要努力的方向。
 
 #3 我去哪里看源代码？
 
