@@ -6,11 +6,18 @@
 * 2020-04-15
 [kepan-docsify.4.9.4.2.zip](https://kepan.org/docsify/down/kepan-docsify.4.9.4.2.zip)
 
+
 #2 更新方法
 > 1. 下载；
 > 2. 解压缩；
 > 3. 覆盖。
 > 其实你只需要更新里面的 js 和 css 两个文件夹里的文件。用它们覆盖你原来的 js 和 css 文件夹即可。
+
+#2 Git 代码库
+* github（国外）
+    * https://github.com/vagra/kepan-docsify
+* gitee（国内）
+    * https://gitee.com/pinsa/kepan-docsify
 
 #2 历史版本
 
