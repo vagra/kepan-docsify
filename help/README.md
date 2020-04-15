@@ -99,13 +99,20 @@ marked 是 github 上的一个开源项目，它是一个用 javascript 开发�
 #3 在个人电脑上使用
 由于浏览器的安全设置，直接双击 index.htm 是没法读取 md 文档的，需要启动一个 Web 服务器，然后通过浏览器来访问。
 
-1. 在硬盘上合适的位置创建一个文件夹，作为本地网站的根目录；
+1. 作为最简单的 Web 服务器解决方案，建议是下载安装 Python3 ：
+    - 下载地址： https://www.python.org/downloads/windows/
+    - 下载最新版的 `Windows x86-64 executable installer` 即可；
+    - 安装时一定要勾选下面的 `Add Python 3.x to PATH` 选项：
+    ![Install Python](assets/Install_Python.jpg)
 
-2. 解压 docsify-kepan.zip ，把里面的文件全都复制到这个文件夹；
 
-3. 双击 server.exe 启动简单 Web 服务器；
+2. 在硬盘上合适的位置创建一个文件夹，作为本地网站的根目录；
 
-4. 然后用浏览器访问 http://localhost 即可。
+3. 解压 docsify-kepan.zip ，把里面的文件全都复制到这个文件夹；
+
+4. 双击 server.exe 启动简单 Web 服务器；
+
+5. 然后用浏览器访问 http://localhost 即可。
 
 #3 有服务器？那就架个网站
 
@@ -118,7 +125,12 @@ marked 是 github 上的一个开源项目，它是一个用 javascript 开发�
 4. 然后用浏览器访问对应的网址即可。
 
 #2 我该怎么往里面添加一个页面呢？
-可以照着下面的步骤实际操作。
+
+默认情况下，每个子目录下，要有一个 README.md ，相当于这个子目录的默认首页。
+
+比方说，我们访问 http://localhost/#/help ，实际上访问到的是 `help/README.md` 。
+
+那么如果希望添加更多的页面该怎么办呢？可以照着下面的步骤实际操作。
 
 #3 第一步：创建一个 md 文件
 
@@ -155,7 +167,7 @@ marked 是 github 上的一个开源项目，它是一个用 javascript 开发�
 #2 相关链接
 
 #3 我去哪里下载你说的这个 docsify-kepan.zip ？
-点击本站上方导航栏 [系统下载](/down/) 即可。
+点击本站上方导航栏 [下载](/down/) 即可。
 
 系统的版本会不定时更新，请留意版本号的变化。
 

@@ -1066,7 +1066,7 @@
 
     var innerHTML = '';
     toc.forEach(function (node) {
-      innerHTML += "<li class=\"lv" + (node.level) + "\"><a class=\"section-link\" href=\"" + (node.slug) + "\">" + (node.title) + "</a></li>";
+      innerHTML += "<li><a class=\"section-link lv" + (node.level) + "\" href=\"" + (node.slug) + "\">" + (node.title) + "</a></li>";
       if (node.children) {
         innerHTML += tree(node.children, tpl);
       }
