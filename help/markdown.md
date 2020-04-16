@@ -36,10 +36,12 @@ Markdown 语法主要分为如下几大部分：
 #3 4.1 标题
 两种形式：
 1）使用`=`和`-`标记一级和二级标题。
-> 一级标题
-> `=========`
-> 二级标题
-> `---------`
+```markdown
+一级标题
+=========
+二级标题
+---------
+```
 
 效果：
 > 一级标题
@@ -48,12 +50,14 @@ Markdown 语法主要分为如下几大部分：
 > ---------
 
 2）使用`#`，可表示 1-6 级标题。
-> \# 一级标题
-> \## 二级标题
-> \### 三级标题
-> \#### 四级标题
-> \##### 五级标题
-> \###### 六级标题
+```markdown
+# 一级标题
+## 二级标题
+### 三级标题
+#### 四级标题
+##### 五级标题
+###### 六级标题
+```
 
 效果：
 > #1 一级标题
@@ -68,8 +72,10 @@ Markdown 语法主要分为如下几大部分：
 
 #3 4.3 区块引用
 在段落的每行或者只在第一行使用符号`>`，还可使用多个嵌套引用，如：
-> \> 区块引用
-> \>> 嵌套引用
+```markdown
+> 区块引用
+>> 嵌套引用
+```
 
 效果：
 > 区块引用
@@ -78,25 +84,26 @@ Markdown 语法主要分为如下几大部分：
 #3 4.4 代码区块
 代码区块的建立是在每行加上4个空格或者一个制表符（如同写代码一样）。如
 普通段落：
-
 void main()
 {
     printf("Hello, Markdown.");
 }
 
 代码区块：
-
+```c
     void main()
     {
         printf("Hello, Markdown.");
     }
-
+```
 **注意**:需要和普通段落之间存在空行。
 
 #3 4.5 强调
 在强调内容两侧分别加上`*`或者`_`，如：
-> \*斜体\*，\_斜体\_
-> \*\*粗体\*\*，\_\_粗体\_\_
+```markdown
+*斜体*，_斜体_
+**粗体**，__粗体__
+```
 
 效果：
 > *斜体*，_斜体_
@@ -104,21 +111,31 @@ void main()
 
 #3 4.6 列表
 使用`·`、`+`、或`-`标记无序列表，如：
-> \-(+\*) 第一项
-> \-(+\*) 第二项
-> \-(+\*) 第三项
+```markdown
+ - 第一项
+ - 第二项
+ + 第三项
+ + 第四项
+ * 第五项
+ * 第六项
+```
 
 **注意**：标记后面最少有一个 _空格_ 或 _制表符_ 。若不在引用区块中，必须和前方段落之间存在空行。
 
 效果：
-> + 第一项
-> + 第二项
+> - 第一项
+> - 第二项
 > + 第三项
+> + 第四项
+> * 第五项
+> * 第六项
 
 有序列表的标记方式是将上述的符号换成数字，并辅以`.`，如：
-> 1\. 第一项
-> 2\. 第二项
-> 3\. 第三项
+```markdown
+ 1. 第一项
+ 2. 第二项
+ 3. 第三项
+```
 
 效果：
 > 1. 第一项
@@ -127,13 +144,13 @@ void main()
 
 #3 4.7 分割线
 分割线最常使用就是三个或以上`*`，还可以使用`-`和`_`。
-
-> \*\*\*
-> \-\-\-
-> \_\_\_
+```markdown
+***
+---
+___
+```
 
 效果：
-
 > ***
 > ---
 > ___
@@ -141,16 +158,20 @@ void main()
 #3 4.8 链接
 链接可以由两种形式生成：**行内式**和**参考式**。
 **行内式**：
-> \[younghz 的 Markdown 库\]\(https:://github.com/younghz/Markdown "Markdown"\)。
+```markdown
+[younghz 的 Markdown 库](https:://github.com/younghz/Markdown "Markdown")。
+```
 
 效果：
 > [younghz 的 Markdown 库](https:://github.com/younghz/Markdown "Markdown")。
 
 **参考式**：
-> \[younghz 的 Markdown 库 1\]\[1\]
-> \[younghz 的 Markdown 库 2\]\[2\]
-> \[1\]:https:://github.com/younghz/Markdown "Markdown"
-> \[2\]:https:://github.com/younghz/Markdown "Markdown"
+```markdown
+[younghz 的 Markdown 库 1][1]
+[younghz 的 Markdown 库 2][2]
+[1]:https:://github.com/younghz/Markdown "Markdown"
+[2]:https:://github.com/younghz/Markdown "Markdown"
+```
 
 效果：
 > [younghz 的 Markdown 库 1][1]
@@ -164,14 +185,18 @@ void main()
 #3 4.9 图片
 添加图片的形式和链接相似，只需在链接的基础上前方加一个`!`。
 例如前面那张照片的代码：
-> \!\[Aaron Swartz\]\(assets/Aaron_Swartz.jpg\)
+```markdown
+![Aaron Swartz](assets/Aaron_Swartz.jpg)
+```
 
 #3 4.10 反斜杠 \\
 相当于**反转义**作用。使符号成为普通符号。
 
 #3 4.11 符号 \`
 起到标记作用。如：
->\`ctrl+a\`
+```markdown
+`ctrl+a`
+```
 
 效果：
 >`ctrl+a`
@@ -205,11 +230,18 @@ Markdown 的使用者：
 列表的使用(非 traditonal markdown )：
 
 用`|`表示表格纵向边界，表头和表内容用`-`隔开，并可用`:`进行对齐设置，两边都有`:`则表示居中，若不加`:`则默认左对齐。
+```markdown
+|代码库       |链接                               |
+|:-----------:|-----------------------------------|
+|MarkDown     |https://github.com/younghz/Markdown|
+|MarkDownCopy |https://github.com/younghz/Markdown|
+```
 
-|代码库                              |链接                                |
-|:------------------------------------:|------------------------------------|
-|MarkDown                              |[https://github.com/younghz/Markdown](https://github.com/younghz/Markdown "Markdown")|
-|MarkDownCopy                              |[https://github.com/younghz/Markdown](https://github.com/younghz/Markdown "Markdown")|
+效果：
+> |代码库       |链接                               |
+> |:-----------:|-----------------------------------|
+> |MarkDown     |https://github.com/younghz/Markdown|
+> |MarkDownCopy |https://github.com/younghz/Markdown|
 
 
 关于其它扩展语法可参见具体工具的使用说明。
