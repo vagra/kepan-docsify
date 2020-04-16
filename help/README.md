@@ -108,7 +108,7 @@ marked 是 github 上的一个开源项目，它是一个用 javascript 开发�
 
 2. 在硬盘上合适的位置创建一个文件夹，作为本地网站的根目录；
 
-3. 解压 docsify-kepan.zip ，把里面的文件全都复制到这个文件夹；
+3. 解压 kepan-docsify.zip ，把里面的文件全都复制到这个文件夹；
 
 4. 双击 server.cmd 启动简单 Web 服务器，不要关闭命令窗口；
 关闭窗口，Web 服务就关闭了。
@@ -121,7 +121,7 @@ marked 是 github 上的一个开源项目，它是一个用 javascript 开发�
 
 2. 适当设置，让这个文件夹可以通过网址访问；
 
-3. 解压 docsify-kepan.zip ，把里面的文件通过 FTP 上传到这个文件夹；
+3. 解压 kepan-docsify.zip ，把里面的文件通过 FTP 上传到这个文件夹；
 
 4. 然后用浏览器访问对应的网址即可。
 
@@ -148,9 +148,9 @@ marked 是 github 上的一个开源项目，它是一个用 javascript 开发�
 ```
 现在这个文档已经可以从浏览器中访问了，访问地址是：
 * 如果是在个人电脑上
-    * http://localhost/#/docs/这是一个文档
+    * http://localhost/#/docs/这是一卷科判
 * 如果是在服务器上
-    * http://abcde.com/#/docs/这是一个文档
+    * http://abcde.com/#/docs/这是一卷科判
 
 也就是说，`http://网站地址/#/子目录/不带 .md 后缀的文件名`
 
@@ -159,7 +159,7 @@ marked 是 github 上的一个开源项目，它是一个用 javascript 开发�
 然后我们编辑根目录下的 README.md ，这个文件，就是首页，我们把新文档的链接添加进去：
 
 ```markdown
-* [一卷科判](docs/这是一卷科判.md)
+* [一卷科判](docs/这是一卷科判)
 ```
 
 好了，在浏览器中刷新一下首页，看看效果。
@@ -167,7 +167,7 @@ marked 是 github 上的一个开源项目，它是一个用 javascript 开发�
 
 #2 相关链接
 
-#3 我去哪里下载你说的这个 docsify-kepan.zip ？
+#3 我去哪里下载你说的这个 kepan-docsify.zip ？
 点击本站上方导航栏 [下载](/down/) 即可。
 
 系统的版本会不定时更新，请留意版本号的变化。
@@ -178,7 +178,7 @@ marked 是 github 上的一个开源项目，它是一个用 javascript 开发�
 这是官方文档的中文版，看着很方便。
 
 #3 我去哪里进一步学习 Markdown 语法？
-简单的标准 Markdown 基本语法可参看这篇 [Markdown 基本语法](help/markdown.md) 。
+简单的标准 Markdown 基本语法可参看这篇 [Markdown 基本语法](help/markdown) 。
 
 然后我们不使用 `#、##、###、####、#####、######` ，而改以 `#1、#2、#3、#4、#5、#6……#107、#108` 来代表各级标题。
 
