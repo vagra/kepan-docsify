@@ -85,6 +85,7 @@ li input[type='checkbox'] {
   margin: 25px 60px 0 0;
   position: absolute;
   right: 0;
+  font-size: 16px;
   text-align: right;
   z-index: 10;
 /* navbar dropdown */
@@ -107,7 +108,6 @@ li input[type='checkbox'] {
 }
 .app-nav a {
   color: inherit;
-  font-size: 16px;
   text-decoration: none;
   transition: color 0.3s;
 }
@@ -216,7 +216,7 @@ main.hidden {
 .sidebar > h1 {
   margin: 0 auto 1rem;
   font-size: 1.5rem;
-  font-weight: 300;
+  font-weight: lighter;
   text-align: center;
 }
 .sidebar > h1 a {
@@ -239,7 +239,7 @@ main.hidden {
   padding: 0;
 }
 .sidebar li > p {
-  font-weight: 700;
+  font-weight: bold;
   margin: 0;
 }
 .sidebar ul,
@@ -306,7 +306,7 @@ body.sticky .sidebar-toggle {
 }
 .markdown-section h1 {
   display: inline-block;
-  font-weight: 600;
+  font-weight: bold;
   margin: 0;
   padding: 0;
 }
@@ -317,7 +317,7 @@ body.sticky .sidebar-toggle {
 }
 .markdown-section h2 {
   display: inline-block;
-  font-weight: 600;
+  font-weight: bold;
   margin: 0;
   padding: 0;
 }
@@ -328,7 +328,7 @@ body.sticky .sidebar-toggle {
 }
 .markdown-section h3 {
   display: inline-block;
-  font-weight: 600;
+  font-weight: bold;
   margin: 0;
   padding: 0;
 }
@@ -339,7 +339,7 @@ body.sticky .sidebar-toggle {
 }
 .markdown-section h4 {
   display: inline-block;
-  font-weight: 600;
+  font-weight: bold;
   margin: 0;
   padding: 0;
 }
@@ -350,7 +350,7 @@ body.sticky .sidebar-toggle {
 }
 .markdown-section h5 {
   display: inline-block;
-  font-weight: 600;
+  font-weight: bold;
   margin: 0;
   padding: 0;
 }
@@ -361,7 +361,7 @@ body.sticky .sidebar-toggle {
 }
 .markdown-section h6 {
   display: inline-block;
-  font-weight: 600;
+  font-weight: bold;
   margin: 0;
   padding: 0;
 }
@@ -372,7 +372,7 @@ body.sticky .sidebar-toggle {
 }
 .markdown-section h7 {
   display: inline-block;
-  font-weight: 600;
+  font-weight: bold;
   margin: 0;
   padding: 0;
 }
@@ -383,7 +383,7 @@ body.sticky .sidebar-toggle {
 }
 .markdown-section h8 {
   display: inline-block;
-  font-weight: 600;
+  font-weight: bold;
   margin: 0;
   padding: 0;
 }
@@ -394,7 +394,7 @@ body.sticky .sidebar-toggle {
 }
 .markdown-section h9 {
   display: inline-block;
-  font-weight: 600;
+  font-weight: bold;
   margin: 0;
   padding: 0;
 }
@@ -405,7 +405,7 @@ body.sticky .sidebar-toggle {
 }
 .markdown-section h10 {
   display: inline-block;
-  font-weight: 600;
+  font-weight: bold;
   margin: 0;
   padding: 0;
 }
@@ -416,7 +416,7 @@ body.sticky .sidebar-toggle {
 }
 .markdown-section h11 {
   display: inline-block;
-  font-weight: 600;
+  font-weight: bold;
   margin: 0;
   padding: 0;
 }
@@ -427,7 +427,7 @@ body.sticky .sidebar-toggle {
 }
 .markdown-section h12 {
   display: inline-block;
-  font-weight: 600;
+  font-weight: bold;
   margin: 0;
   padding: 0;
 }
@@ -438,7 +438,7 @@ body.sticky .sidebar-toggle {
 }
 .markdown-section h13 {
   display: inline-block;
-  font-weight: 600;
+  font-weight: bold;
   margin: 0;
   padding: 0;
 }
@@ -449,7 +449,7 @@ body.sticky .sidebar-toggle {
 }
 .markdown-section h14 {
   display: inline-block;
-  font-weight: 600;
+  font-weight: bold;
   margin: 0;
   padding: 0;
 }
@@ -460,7 +460,7 @@ body.sticky .sidebar-toggle {
 }
 .markdown-section h15 {
   display: inline-block;
-  font-weight: 600;
+  font-weight: bold;
   margin: 0;
   padding: 0;
 }
@@ -471,7 +471,7 @@ body.sticky .sidebar-toggle {
 }
 .markdown-section h16 {
   display: inline-block;
-  font-weight: 600;
+  font-weight: bold;
   margin: 0;
   padding: 0;
 }
@@ -482,7 +482,7 @@ body.sticky .sidebar-toggle {
 }
 .markdown-section h17 {
   display: inline-block;
-  font-weight: 600;
+  font-weight: bold;
   margin: 0;
   padding: 0;
 }
@@ -493,7 +493,7 @@ body.sticky .sidebar-toggle {
 }
 .markdown-section h18 {
   display: inline-block;
-  font-weight: 600;
+  font-weight: bold;
   margin: 0;
   padding: 0;
 }
@@ -504,7 +504,7 @@ body.sticky .sidebar-toggle {
 }
 .markdown-section h19 {
   display: inline-block;
-  font-weight: 600;
+  font-weight: bold;
   margin: 0;
   padding: 0;
 }
@@ -515,7 +515,7 @@ body.sticky .sidebar-toggle {
 }
 .markdown-section h20 {
   display: inline-block;
-  font-weight: 600;
+  font-weight: bold;
   margin: 0;
   padding: 0;
 }
@@ -526,7 +526,7 @@ body.sticky .sidebar-toggle {
 }
 .markdown-section h21 {
   display: inline-block;
-  font-weight: 600;
+  font-weight: bold;
   margin: 0;
   padding: 0;
 }
@@ -537,7 +537,7 @@ body.sticky .sidebar-toggle {
 }
 .markdown-section h22 {
   display: inline-block;
-  font-weight: 600;
+  font-weight: bold;
   margin: 0;
   padding: 0;
 }
@@ -548,7 +548,7 @@ body.sticky .sidebar-toggle {
 }
 .markdown-section h23 {
   display: inline-block;
-  font-weight: 600;
+  font-weight: bold;
   margin: 0;
   padding: 0;
 }
@@ -559,7 +559,7 @@ body.sticky .sidebar-toggle {
 }
 .markdown-section h24 {
   display: inline-block;
-  font-weight: 600;
+  font-weight: bold;
   margin: 0;
   padding: 0;
 }
@@ -570,7 +570,7 @@ body.sticky .sidebar-toggle {
 }
 .markdown-section h25 {
   display: inline-block;
-  font-weight: 600;
+  font-weight: bold;
   margin: 0;
   padding: 0;
 }
@@ -581,7 +581,7 @@ body.sticky .sidebar-toggle {
 }
 .markdown-section h26 {
   display: inline-block;
-  font-weight: 600;
+  font-weight: bold;
   margin: 0;
   padding: 0;
 }
@@ -592,7 +592,7 @@ body.sticky .sidebar-toggle {
 }
 .markdown-section h27 {
   display: inline-block;
-  font-weight: 600;
+  font-weight: bold;
   margin: 0;
   padding: 0;
 }
@@ -603,7 +603,7 @@ body.sticky .sidebar-toggle {
 }
 .markdown-section h28 {
   display: inline-block;
-  font-weight: 600;
+  font-weight: bold;
   margin: 0;
   padding: 0;
 }
@@ -614,7 +614,7 @@ body.sticky .sidebar-toggle {
 }
 .markdown-section h29 {
   display: inline-block;
-  font-weight: 600;
+  font-weight: bold;
   margin: 0;
   padding: 0;
 }
@@ -625,7 +625,7 @@ body.sticky .sidebar-toggle {
 }
 .markdown-section h30 {
   display: inline-block;
-  font-weight: 600;
+  font-weight: bold;
   margin: 0;
   padding: 0;
 }
@@ -636,7 +636,7 @@ body.sticky .sidebar-toggle {
 }
 .markdown-section h31 {
   display: inline-block;
-  font-weight: 600;
+  font-weight: bold;
   margin: 0;
   padding: 0;
 }
@@ -647,7 +647,7 @@ body.sticky .sidebar-toggle {
 }
 .markdown-section h32 {
   display: inline-block;
-  font-weight: 600;
+  font-weight: bold;
   margin: 0;
   padding: 0;
 }
@@ -658,7 +658,7 @@ body.sticky .sidebar-toggle {
 }
 .markdown-section h33 {
   display: inline-block;
-  font-weight: 600;
+  font-weight: bold;
   margin: 0;
   padding: 0;
 }
@@ -669,7 +669,7 @@ body.sticky .sidebar-toggle {
 }
 .markdown-section h34 {
   display: inline-block;
-  font-weight: 600;
+  font-weight: bold;
   margin: 0;
   padding: 0;
 }
@@ -680,7 +680,7 @@ body.sticky .sidebar-toggle {
 }
 .markdown-section h35 {
   display: inline-block;
-  font-weight: 600;
+  font-weight: bold;
   margin: 0;
   padding: 0;
 }
@@ -691,7 +691,7 @@ body.sticky .sidebar-toggle {
 }
 .markdown-section h36 {
   display: inline-block;
-  font-weight: 600;
+  font-weight: bold;
   margin: 0;
   padding: 0;
 }
@@ -702,7 +702,7 @@ body.sticky .sidebar-toggle {
 }
 .markdown-section h37 {
   display: inline-block;
-  font-weight: 600;
+  font-weight: bold;
   margin: 0;
   padding: 0;
 }
@@ -713,7 +713,7 @@ body.sticky .sidebar-toggle {
 }
 .markdown-section h38 {
   display: inline-block;
-  font-weight: 600;
+  font-weight: bold;
   margin: 0;
   padding: 0;
 }
@@ -724,7 +724,7 @@ body.sticky .sidebar-toggle {
 }
 .markdown-section h39 {
   display: inline-block;
-  font-weight: 600;
+  font-weight: bold;
   margin: 0;
   padding: 0;
 }
@@ -735,7 +735,7 @@ body.sticky .sidebar-toggle {
 }
 .markdown-section h40 {
   display: inline-block;
-  font-weight: 600;
+  font-weight: bold;
   margin: 0;
   padding: 0;
 }
@@ -746,7 +746,7 @@ body.sticky .sidebar-toggle {
 }
 .markdown-section h41 {
   display: inline-block;
-  font-weight: 600;
+  font-weight: bold;
   margin: 0;
   padding: 0;
 }
@@ -757,7 +757,7 @@ body.sticky .sidebar-toggle {
 }
 .markdown-section h42 {
   display: inline-block;
-  font-weight: 600;
+  font-weight: bold;
   margin: 0;
   padding: 0;
 }
@@ -768,7 +768,7 @@ body.sticky .sidebar-toggle {
 }
 .markdown-section h43 {
   display: inline-block;
-  font-weight: 600;
+  font-weight: bold;
   margin: 0;
   padding: 0;
 }
@@ -779,7 +779,7 @@ body.sticky .sidebar-toggle {
 }
 .markdown-section h44 {
   display: inline-block;
-  font-weight: 600;
+  font-weight: bold;
   margin: 0;
   padding: 0;
 }
@@ -790,7 +790,7 @@ body.sticky .sidebar-toggle {
 }
 .markdown-section h45 {
   display: inline-block;
-  font-weight: 600;
+  font-weight: bold;
   margin: 0;
   padding: 0;
 }
@@ -801,7 +801,7 @@ body.sticky .sidebar-toggle {
 }
 .markdown-section h46 {
   display: inline-block;
-  font-weight: 600;
+  font-weight: bold;
   margin: 0;
   padding: 0;
 }
@@ -812,7 +812,7 @@ body.sticky .sidebar-toggle {
 }
 .markdown-section h47 {
   display: inline-block;
-  font-weight: 600;
+  font-weight: bold;
   margin: 0;
   padding: 0;
 }
@@ -823,7 +823,7 @@ body.sticky .sidebar-toggle {
 }
 .markdown-section h48 {
   display: inline-block;
-  font-weight: 600;
+  font-weight: bold;
   margin: 0;
   padding: 0;
 }
@@ -834,7 +834,7 @@ body.sticky .sidebar-toggle {
 }
 .markdown-section h49 {
   display: inline-block;
-  font-weight: 600;
+  font-weight: bold;
   margin: 0;
   padding: 0;
 }
@@ -845,7 +845,7 @@ body.sticky .sidebar-toggle {
 }
 .markdown-section h50 {
   display: inline-block;
-  font-weight: 600;
+  font-weight: bold;
   margin: 0;
   padding: 0;
 }
@@ -856,7 +856,7 @@ body.sticky .sidebar-toggle {
 }
 .markdown-section h51 {
   display: inline-block;
-  font-weight: 600;
+  font-weight: bold;
   margin: 0;
   padding: 0;
 }
@@ -867,7 +867,7 @@ body.sticky .sidebar-toggle {
 }
 .markdown-section h52 {
   display: inline-block;
-  font-weight: 600;
+  font-weight: bold;
   margin: 0;
   padding: 0;
 }
@@ -878,7 +878,7 @@ body.sticky .sidebar-toggle {
 }
 .markdown-section h53 {
   display: inline-block;
-  font-weight: 600;
+  font-weight: bold;
   margin: 0;
   padding: 0;
 }
@@ -889,7 +889,7 @@ body.sticky .sidebar-toggle {
 }
 .markdown-section h54 {
   display: inline-block;
-  font-weight: 600;
+  font-weight: bold;
   margin: 0;
   padding: 0;
 }
@@ -900,7 +900,7 @@ body.sticky .sidebar-toggle {
 }
 .markdown-section h55 {
   display: inline-block;
-  font-weight: 600;
+  font-weight: bold;
   margin: 0;
   padding: 0;
 }
@@ -911,7 +911,7 @@ body.sticky .sidebar-toggle {
 }
 .markdown-section h56 {
   display: inline-block;
-  font-weight: 600;
+  font-weight: bold;
   margin: 0;
   padding: 0;
 }
@@ -922,7 +922,7 @@ body.sticky .sidebar-toggle {
 }
 .markdown-section h57 {
   display: inline-block;
-  font-weight: 600;
+  font-weight: bold;
   margin: 0;
   padding: 0;
 }
@@ -933,7 +933,7 @@ body.sticky .sidebar-toggle {
 }
 .markdown-section h58 {
   display: inline-block;
-  font-weight: 600;
+  font-weight: bold;
   margin: 0;
   padding: 0;
 }
@@ -944,7 +944,7 @@ body.sticky .sidebar-toggle {
 }
 .markdown-section h59 {
   display: inline-block;
-  font-weight: 600;
+  font-weight: bold;
   margin: 0;
   padding: 0;
 }
@@ -955,7 +955,7 @@ body.sticky .sidebar-toggle {
 }
 .markdown-section h60 {
   display: inline-block;
-  font-weight: 600;
+  font-weight: bold;
   margin: 0;
   padding: 0;
 }
@@ -966,7 +966,7 @@ body.sticky .sidebar-toggle {
 }
 .markdown-section h61 {
   display: inline-block;
-  font-weight: 600;
+  font-weight: bold;
   margin: 0;
   padding: 0;
 }
@@ -977,7 +977,7 @@ body.sticky .sidebar-toggle {
 }
 .markdown-section h62 {
   display: inline-block;
-  font-weight: 600;
+  font-weight: bold;
   margin: 0;
   padding: 0;
 }
@@ -988,7 +988,7 @@ body.sticky .sidebar-toggle {
 }
 .markdown-section h63 {
   display: inline-block;
-  font-weight: 600;
+  font-weight: bold;
   margin: 0;
   padding: 0;
 }
@@ -999,7 +999,7 @@ body.sticky .sidebar-toggle {
 }
 .markdown-section h64 {
   display: inline-block;
-  font-weight: 600;
+  font-weight: bold;
   margin: 0;
   padding: 0;
 }
@@ -1010,7 +1010,7 @@ body.sticky .sidebar-toggle {
 }
 .markdown-section h65 {
   display: inline-block;
-  font-weight: 600;
+  font-weight: bold;
   margin: 0;
   padding: 0;
 }
@@ -1021,7 +1021,7 @@ body.sticky .sidebar-toggle {
 }
 .markdown-section h66 {
   display: inline-block;
-  font-weight: 600;
+  font-weight: bold;
   margin: 0;
   padding: 0;
 }
@@ -1032,7 +1032,7 @@ body.sticky .sidebar-toggle {
 }
 .markdown-section h67 {
   display: inline-block;
-  font-weight: 600;
+  font-weight: bold;
   margin: 0;
   padding: 0;
 }
@@ -1043,7 +1043,7 @@ body.sticky .sidebar-toggle {
 }
 .markdown-section h68 {
   display: inline-block;
-  font-weight: 600;
+  font-weight: bold;
   margin: 0;
   padding: 0;
 }
@@ -1054,7 +1054,7 @@ body.sticky .sidebar-toggle {
 }
 .markdown-section h69 {
   display: inline-block;
-  font-weight: 600;
+  font-weight: bold;
   margin: 0;
   padding: 0;
 }
@@ -1065,7 +1065,7 @@ body.sticky .sidebar-toggle {
 }
 .markdown-section h70 {
   display: inline-block;
-  font-weight: 600;
+  font-weight: bold;
   margin: 0;
   padding: 0;
 }
@@ -1076,7 +1076,7 @@ body.sticky .sidebar-toggle {
 }
 .markdown-section h71 {
   display: inline-block;
-  font-weight: 600;
+  font-weight: bold;
   margin: 0;
   padding: 0;
 }
@@ -1087,7 +1087,7 @@ body.sticky .sidebar-toggle {
 }
 .markdown-section h72 {
   display: inline-block;
-  font-weight: 600;
+  font-weight: bold;
   margin: 0;
   padding: 0;
 }
@@ -1098,7 +1098,7 @@ body.sticky .sidebar-toggle {
 }
 .markdown-section h73 {
   display: inline-block;
-  font-weight: 600;
+  font-weight: bold;
   margin: 0;
   padding: 0;
 }
@@ -1109,7 +1109,7 @@ body.sticky .sidebar-toggle {
 }
 .markdown-section h74 {
   display: inline-block;
-  font-weight: 600;
+  font-weight: bold;
   margin: 0;
   padding: 0;
 }
@@ -1120,7 +1120,7 @@ body.sticky .sidebar-toggle {
 }
 .markdown-section h75 {
   display: inline-block;
-  font-weight: 600;
+  font-weight: bold;
   margin: 0;
   padding: 0;
 }
@@ -1131,7 +1131,7 @@ body.sticky .sidebar-toggle {
 }
 .markdown-section h76 {
   display: inline-block;
-  font-weight: 600;
+  font-weight: bold;
   margin: 0;
   padding: 0;
 }
@@ -1142,7 +1142,7 @@ body.sticky .sidebar-toggle {
 }
 .markdown-section h77 {
   display: inline-block;
-  font-weight: 600;
+  font-weight: bold;
   margin: 0;
   padding: 0;
 }
@@ -1153,7 +1153,7 @@ body.sticky .sidebar-toggle {
 }
 .markdown-section h78 {
   display: inline-block;
-  font-weight: 600;
+  font-weight: bold;
   margin: 0;
   padding: 0;
 }
@@ -1164,7 +1164,7 @@ body.sticky .sidebar-toggle {
 }
 .markdown-section h79 {
   display: inline-block;
-  font-weight: 600;
+  font-weight: bold;
   margin: 0;
   padding: 0;
 }
@@ -1175,7 +1175,7 @@ body.sticky .sidebar-toggle {
 }
 .markdown-section h80 {
   display: inline-block;
-  font-weight: 600;
+  font-weight: bold;
   margin: 0;
   padding: 0;
 }
@@ -1186,7 +1186,7 @@ body.sticky .sidebar-toggle {
 }
 .markdown-section h81 {
   display: inline-block;
-  font-weight: 600;
+  font-weight: bold;
   margin: 0;
   padding: 0;
 }
@@ -1197,7 +1197,7 @@ body.sticky .sidebar-toggle {
 }
 .markdown-section h82 {
   display: inline-block;
-  font-weight: 600;
+  font-weight: bold;
   margin: 0;
   padding: 0;
 }
@@ -1208,7 +1208,7 @@ body.sticky .sidebar-toggle {
 }
 .markdown-section h83 {
   display: inline-block;
-  font-weight: 600;
+  font-weight: bold;
   margin: 0;
   padding: 0;
 }
@@ -1219,7 +1219,7 @@ body.sticky .sidebar-toggle {
 }
 .markdown-section h84 {
   display: inline-block;
-  font-weight: 600;
+  font-weight: bold;
   margin: 0;
   padding: 0;
 }
@@ -1230,7 +1230,7 @@ body.sticky .sidebar-toggle {
 }
 .markdown-section h85 {
   display: inline-block;
-  font-weight: 600;
+  font-weight: bold;
   margin: 0;
   padding: 0;
 }
@@ -1241,7 +1241,7 @@ body.sticky .sidebar-toggle {
 }
 .markdown-section h86 {
   display: inline-block;
-  font-weight: 600;
+  font-weight: bold;
   margin: 0;
   padding: 0;
 }
@@ -1252,7 +1252,7 @@ body.sticky .sidebar-toggle {
 }
 .markdown-section h87 {
   display: inline-block;
-  font-weight: 600;
+  font-weight: bold;
   margin: 0;
   padding: 0;
 }
@@ -1263,7 +1263,7 @@ body.sticky .sidebar-toggle {
 }
 .markdown-section h88 {
   display: inline-block;
-  font-weight: 600;
+  font-weight: bold;
   margin: 0;
   padding: 0;
 }
@@ -1274,7 +1274,7 @@ body.sticky .sidebar-toggle {
 }
 .markdown-section h89 {
   display: inline-block;
-  font-weight: 600;
+  font-weight: bold;
   margin: 0;
   padding: 0;
 }
@@ -1285,7 +1285,7 @@ body.sticky .sidebar-toggle {
 }
 .markdown-section h90 {
   display: inline-block;
-  font-weight: 600;
+  font-weight: bold;
   margin: 0;
   padding: 0;
 }
@@ -1296,7 +1296,7 @@ body.sticky .sidebar-toggle {
 }
 .markdown-section h91 {
   display: inline-block;
-  font-weight: 600;
+  font-weight: bold;
   margin: 0;
   padding: 0;
 }
@@ -1307,7 +1307,7 @@ body.sticky .sidebar-toggle {
 }
 .markdown-section h92 {
   display: inline-block;
-  font-weight: 600;
+  font-weight: bold;
   margin: 0;
   padding: 0;
 }
@@ -1318,7 +1318,7 @@ body.sticky .sidebar-toggle {
 }
 .markdown-section h93 {
   display: inline-block;
-  font-weight: 600;
+  font-weight: bold;
   margin: 0;
   padding: 0;
 }
@@ -1329,7 +1329,7 @@ body.sticky .sidebar-toggle {
 }
 .markdown-section h94 {
   display: inline-block;
-  font-weight: 600;
+  font-weight: bold;
   margin: 0;
   padding: 0;
 }
@@ -1340,7 +1340,7 @@ body.sticky .sidebar-toggle {
 }
 .markdown-section h95 {
   display: inline-block;
-  font-weight: 600;
+  font-weight: bold;
   margin: 0;
   padding: 0;
 }
@@ -1351,7 +1351,7 @@ body.sticky .sidebar-toggle {
 }
 .markdown-section h96 {
   display: inline-block;
-  font-weight: 600;
+  font-weight: bold;
   margin: 0;
   padding: 0;
 }
@@ -1362,7 +1362,7 @@ body.sticky .sidebar-toggle {
 }
 .markdown-section h97 {
   display: inline-block;
-  font-weight: 600;
+  font-weight: bold;
   margin: 0;
   padding: 0;
 }
@@ -1373,7 +1373,7 @@ body.sticky .sidebar-toggle {
 }
 .markdown-section h98 {
   display: inline-block;
-  font-weight: 600;
+  font-weight: bold;
   margin: 0;
   padding: 0;
 }
@@ -1384,7 +1384,7 @@ body.sticky .sidebar-toggle {
 }
 .markdown-section h99 {
   display: inline-block;
-  font-weight: 600;
+  font-weight: bold;
   margin: 0;
   padding: 0;
 }
@@ -1395,7 +1395,7 @@ body.sticky .sidebar-toggle {
 }
 .markdown-section h100 {
   display: inline-block;
-  font-weight: 600;
+  font-weight: bold;
   margin: 0;
   padding: 0;
 }
@@ -1406,7 +1406,7 @@ body.sticky .sidebar-toggle {
 }
 .markdown-section h101 {
   display: inline-block;
-  font-weight: 600;
+  font-weight: bold;
   margin: 0;
   padding: 0;
 }
@@ -1417,7 +1417,7 @@ body.sticky .sidebar-toggle {
 }
 .markdown-section h102 {
   display: inline-block;
-  font-weight: 600;
+  font-weight: bold;
   margin: 0;
   padding: 0;
 }
@@ -1428,7 +1428,7 @@ body.sticky .sidebar-toggle {
 }
 .markdown-section h103 {
   display: inline-block;
-  font-weight: 600;
+  font-weight: bold;
   margin: 0;
   padding: 0;
 }
@@ -1439,7 +1439,7 @@ body.sticky .sidebar-toggle {
 }
 .markdown-section h104 {
   display: inline-block;
-  font-weight: 600;
+  font-weight: bold;
   margin: 0;
   padding: 0;
 }
@@ -1450,7 +1450,7 @@ body.sticky .sidebar-toggle {
 }
 .markdown-section h105 {
   display: inline-block;
-  font-weight: 600;
+  font-weight: bold;
   margin: 0;
   padding: 0;
 }
@@ -1461,7 +1461,7 @@ body.sticky .sidebar-toggle {
 }
 .markdown-section h106 {
   display: inline-block;
-  font-weight: 600;
+  font-weight: bold;
   margin: 0;
   padding: 0;
 }
@@ -1472,7 +1472,7 @@ body.sticky .sidebar-toggle {
 }
 .markdown-section h107 {
   display: inline-block;
-  font-weight: 600;
+  font-weight: bold;
   margin: 0;
   padding: 0;
 }
@@ -1483,7 +1483,7 @@ body.sticky .sidebar-toggle {
 }
 .markdown-section h108 {
   display: inline-block;
-  font-weight: 600;
+  font-weight: bold;
   margin: 0;
   padding: 0;
 }
@@ -2171,6 +2171,12 @@ body.close .content {
     width: auto;
     padding: 30px 30px 10px 10px;
   }
+  .markdown-section {
+    max-width: 98%;
+  }
+  body {
+    font-size: 18px;
+  }
   body.close .sidebar {
     transform: translateX(480px);
   }
@@ -2257,7 +2263,7 @@ section.cover p {
 section.cover h1 {
   color: inherit;
   font-size: 2.5rem;
-  font-weight: 300;
+  font-weight: lighter;
   margin: 0.625rem 0 2.5rem;
   position: relative;
   text-align: center;
