@@ -882,12 +882,14 @@
     li.classList.add('active');
     active = li;
 
+    updateTree(active);
+
     // Scroll into view
     // https://github.com/vuejs/vuejs.org/blob/master/themes/vue/source/js/common.js#L282-L297
     if (!hoverOver && body.classList.contains('sticky')) {
       var height = sidebar.clientHeight;
       var curOffset = 0;
-      var cur = active.offsetTop + active.clientHeight + 40;
+      var cur = active.offsetTop + active.clientHeight + height / 2;
       var isInView =
         active.offsetTop >= wrap.scrollTop && cur <= wrap.scrollTop + height;
       var notThan = cur - curOffset < height;
@@ -895,6 +897,58 @@
 
       sidebar.scrollTop = top$1;
     }
+  }
+
+  function updateTree(active) {
+    var prev_parents = findAll('.parent');
+    var prev_siblings = findAll('.sibling');
+    var prev_closeds = findAll('.closed');
+
+    prev_parents.forEach(function (node) { return node.classList.remove('parent'); });
+    prev_siblings.forEach(function (node) { return node.classList.remove('sibling'); });
+    prev_closeds.forEach(function (node) { return node.classList.remove('closed'); });
+
+    var test = active.parentNode;
+    while (test && test.className !== 'sidebar-nav') {
+      test.classList.add('parent');
+
+      var brothers = test.parentNode.childNodes;
+
+      brothers &&
+        brothers.forEach(function (node) {
+          if (
+            node.tagName === 'LI' &&
+            node.nextSibling &&
+            node.nextSibling.tagName === 'UL' &&
+            node.nextSibling !== test
+          ) {
+            node.classList.add('closed');
+          }
+        });
+
+      test = test.parentNode;
+    }
+
+    var siblings = active.parentNode.childNodes;
+    siblings &&
+      siblings.forEach(function (sbl) {
+        if (sbl.tagName === 'UL') {
+          sbl.classList.add('sibling');
+        }
+
+        var childs = sbl.childNodes;
+
+        childs &&
+          childs.forEach(function (cld) {
+            if (
+              cld.tagName === 'LI' &&
+              cld.nextSibling &&
+              cld.nextSibling.tagName === 'UL'
+            ) {
+              cld.classList.add('closed');
+            }
+          });
+      });
   }
 
   function getNavKey(path, id) {
@@ -934,10 +988,6 @@
       }
     }
 
-    if (isMobile) {
-      return;
-    }
-
     var path = router.getCurrentPath();
     off('scroll', function () { return highlight(path); });
     on('scroll', function () { return highlight(path); });
@@ -954,14 +1004,25 @@
       return;
     }
     var topMargin = config().topMargin;
-    var section = find('#' + id);
-    section && scrollTo(section, topMargin);
 
-    var li = nav[getNavKey(path, id)];
+    var prev_sections = findAll('.current');
+    prev_sections.forEach(function (node) { return node.classList.remove('current'); });
+
+    var section = find('#' + id);
+    if (section) {
+      section.classList.add('current');
+      scrollTo(section, topMargin);
+    }
+
     var sidebar = getNode('.sidebar');
     var active = find(sidebar, 'li.active');
     active && active.classList.remove('active');
-    li && li.classList.add('active');
+
+    var li = nav[getNavKey(decodeURIComponent(path), decodeURIComponent(id))];
+    if (li) {
+      li.classList.add('active');
+      updateTree(li);
+    }
   }
 
   var scrollEl = $.scrollingElement || $.documentElement;

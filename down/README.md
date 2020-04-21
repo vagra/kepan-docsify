@@ -3,9 +3,9 @@
 不定期更新，请下载最新版本。
 
 #2 最新版本
-* 2020-04-16
-[kepan-docsify.4.9.4.4.zip](https://kepan.org/docsify/down/kepan-docsify.4.9.4.4.zip)
-修改了一些 css 以更好地适配手机浏览器。稍微调大了手机访问时的字体，并且解决了安卓手机上粗体不能正常显示的问题。
+* 2020-04-21
+[kepan-docsify.4.11.3.5.zip](https://kepan.org/docsify/down/kepan-docsify.4.11.3.5.zip)
+增进了侧边栏的功能，让侧边栏可以同步滚动、可以点击展开和折叠。
 
 #2 更新方法
 > 1. 下载；
@@ -20,6 +20,10 @@
     * https://gitee.com/pinsa/kepan-docsify
 
 #2 历史版本
+* 2020-04-16
+[kepan-docsify.4.9.4.4.zip](https://kepan.org/docsify/down/kepan-docsify.4.9.4.4.zip)
+修改了一些 css 以更好地适配手机浏览器。稍微调大了手机访问时的字体，并且解决了安卓手机上粗体不能正常显示的问题。
+
 * 2020-04-16
 [kepan-docsify.4.9.4.3.zip](https://kepan.org/docsify/down/kepan-docsify.4.9.4.3.zip)
 修改 marked 之后产生了一些 BUG ，这些 BUG 造成了 7 个单元测试失败。现在我已解决了这些问题，单元测试全部通过。直观的表现，就是你能体会到网页加载快了很多。

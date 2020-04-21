@@ -54,8 +54,8 @@ body {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   color: #000;
-  font-family: 'Source Sans Pro', 'Helvetica Neue', Arial, sans-serif;
-  font-size: 15px;
+  font-family: "Source Sans Pro", -apple-system, "Noto Sans", "Helvetica Neue", Helvetica, "Nimbus Sans L", Arial, "Liberation Sans", "PingFang SC", "Hiragino Sans GB", "Noto Sans CJK SC", "Source Han Sans SC", "Source Han Sans CN", "Microsoft YaHei", "Wenquanyi Micro Hei", "WenQuanYi Zen Hei", "ST Heiti", SimHei, "WenQuanYi Zen Hei Sharp", sans-serif;
+  font-size: 14px;
   letter-spacing: 0;
   margin: 0;
   overflow-x: hidden;
@@ -194,9 +194,6 @@ main.hidden {
   text-decoration: none;
   transition: all 0.3s;
 }
-.anchor span {
-  color: #000;
-}
 .anchor:hover {
   text-decoration: underline;
 }
@@ -228,8 +225,14 @@ main.hidden {
   position: static;
 }
 .sidebar .sidebar-nav {
-  line-height: 2em;
+  line-height: 1.6em;
   padding-bottom: 40px;
+}
+.sidebar li {
+  display: flex;
+}
+.sidebar li:before {
+  content: '-';
 }
 .sidebar li.collapse .app-sub-sidebar {
   display: none;
@@ -237,6 +240,7 @@ main.hidden {
 .sidebar ul {
   margin: 0 0 0 15px;
   padding: 0;
+  display: none;
 }
 .sidebar li > p {
   font-weight: bold;
@@ -305,10 +309,7 @@ body.sticky .sidebar-toggle {
   transition: left 250ms ease;
 }
 .markdown-section h1 {
-  display: inline-block;
-  font-weight: bold;
-  margin: 0;
-  padding: 0;
+  display: block;
 }
 .markdown-section h1::before {
   content: "H1";
@@ -316,10 +317,7 @@ body.sticky .sidebar-toggle {
   padding: 0 0.3rem;
 }
 .markdown-section h2 {
-  display: inline-block;
-  font-weight: bold;
-  margin: 0;
-  padding: 0;
+  display: block;
 }
 .markdown-section h2::before {
   content: "H2";
@@ -327,10 +325,7 @@ body.sticky .sidebar-toggle {
   padding: 0 0.3rem;
 }
 .markdown-section h3 {
-  display: inline-block;
-  font-weight: bold;
-  margin: 0;
-  padding: 0;
+  display: block;
 }
 .markdown-section h3::before {
   content: "H3";
@@ -338,10 +333,7 @@ body.sticky .sidebar-toggle {
   padding: 0 0.3rem;
 }
 .markdown-section h4 {
-  display: inline-block;
-  font-weight: bold;
-  margin: 0;
-  padding: 0;
+  display: block;
 }
 .markdown-section h4::before {
   content: "H4";
@@ -349,10 +341,7 @@ body.sticky .sidebar-toggle {
   padding: 0 0.3rem;
 }
 .markdown-section h5 {
-  display: inline-block;
-  font-weight: bold;
-  margin: 0;
-  padding: 0;
+  display: block;
 }
 .markdown-section h5::before {
   content: "H5";
@@ -360,10 +349,7 @@ body.sticky .sidebar-toggle {
   padding: 0 0.3rem;
 }
 .markdown-section h6 {
-  display: inline-block;
-  font-weight: bold;
-  margin: 0;
-  padding: 0;
+  display: block;
 }
 .markdown-section h6::before {
   content: "H6";
@@ -371,10 +357,7 @@ body.sticky .sidebar-toggle {
   padding: 0 0.3rem;
 }
 .markdown-section h7 {
-  display: inline-block;
-  font-weight: bold;
-  margin: 0;
-  padding: 0;
+  display: block;
 }
 .markdown-section h7::before {
   content: "H7";
@@ -382,10 +365,7 @@ body.sticky .sidebar-toggle {
   padding: 0 0.3rem;
 }
 .markdown-section h8 {
-  display: inline-block;
-  font-weight: bold;
-  margin: 0;
-  padding: 0;
+  display: block;
 }
 .markdown-section h8::before {
   content: "H8";
@@ -393,10 +373,7 @@ body.sticky .sidebar-toggle {
   padding: 0 0.3rem;
 }
 .markdown-section h9 {
-  display: inline-block;
-  font-weight: bold;
-  margin: 0;
-  padding: 0;
+  display: block;
 }
 .markdown-section h9::before {
   content: "H9";
@@ -404,10 +381,7 @@ body.sticky .sidebar-toggle {
   padding: 0 0.3rem;
 }
 .markdown-section h10 {
-  display: inline-block;
-  font-weight: bold;
-  margin: 0;
-  padding: 0;
+  display: block;
 }
 .markdown-section h10::before {
   content: "H10";
@@ -415,10 +389,7 @@ body.sticky .sidebar-toggle {
   padding: 0 0.3rem;
 }
 .markdown-section h11 {
-  display: inline-block;
-  font-weight: bold;
-  margin: 0;
-  padding: 0;
+  display: block;
 }
 .markdown-section h11::before {
   content: "H11";
@@ -426,10 +397,7 @@ body.sticky .sidebar-toggle {
   padding: 0 0.3rem;
 }
 .markdown-section h12 {
-  display: inline-block;
-  font-weight: bold;
-  margin: 0;
-  padding: 0;
+  display: block;
 }
 .markdown-section h12::before {
   content: "H12";
@@ -437,10 +405,7 @@ body.sticky .sidebar-toggle {
   padding: 0 0.3rem;
 }
 .markdown-section h13 {
-  display: inline-block;
-  font-weight: bold;
-  margin: 0;
-  padding: 0;
+  display: block;
 }
 .markdown-section h13::before {
   content: "H13";
@@ -448,10 +413,7 @@ body.sticky .sidebar-toggle {
   padding: 0 0.3rem;
 }
 .markdown-section h14 {
-  display: inline-block;
-  font-weight: bold;
-  margin: 0;
-  padding: 0;
+  display: block;
 }
 .markdown-section h14::before {
   content: "H14";
@@ -459,10 +421,7 @@ body.sticky .sidebar-toggle {
   padding: 0 0.3rem;
 }
 .markdown-section h15 {
-  display: inline-block;
-  font-weight: bold;
-  margin: 0;
-  padding: 0;
+  display: block;
 }
 .markdown-section h15::before {
   content: "H15";
@@ -470,10 +429,7 @@ body.sticky .sidebar-toggle {
   padding: 0 0.3rem;
 }
 .markdown-section h16 {
-  display: inline-block;
-  font-weight: bold;
-  margin: 0;
-  padding: 0;
+  display: block;
 }
 .markdown-section h16::before {
   content: "H16";
@@ -481,10 +437,7 @@ body.sticky .sidebar-toggle {
   padding: 0 0.3rem;
 }
 .markdown-section h17 {
-  display: inline-block;
-  font-weight: bold;
-  margin: 0;
-  padding: 0;
+  display: block;
 }
 .markdown-section h17::before {
   content: "H17";
@@ -492,10 +445,7 @@ body.sticky .sidebar-toggle {
   padding: 0 0.3rem;
 }
 .markdown-section h18 {
-  display: inline-block;
-  font-weight: bold;
-  margin: 0;
-  padding: 0;
+  display: block;
 }
 .markdown-section h18::before {
   content: "H18";
@@ -503,10 +453,7 @@ body.sticky .sidebar-toggle {
   padding: 0 0.3rem;
 }
 .markdown-section h19 {
-  display: inline-block;
-  font-weight: bold;
-  margin: 0;
-  padding: 0;
+  display: block;
 }
 .markdown-section h19::before {
   content: "H19";
@@ -514,10 +461,7 @@ body.sticky .sidebar-toggle {
   padding: 0 0.3rem;
 }
 .markdown-section h20 {
-  display: inline-block;
-  font-weight: bold;
-  margin: 0;
-  padding: 0;
+  display: block;
 }
 .markdown-section h20::before {
   content: "H20";
@@ -525,10 +469,7 @@ body.sticky .sidebar-toggle {
   padding: 0 0.3rem;
 }
 .markdown-section h21 {
-  display: inline-block;
-  font-weight: bold;
-  margin: 0;
-  padding: 0;
+  display: block;
 }
 .markdown-section h21::before {
   content: "H21";
@@ -536,10 +477,7 @@ body.sticky .sidebar-toggle {
   padding: 0 0.3rem;
 }
 .markdown-section h22 {
-  display: inline-block;
-  font-weight: bold;
-  margin: 0;
-  padding: 0;
+  display: block;
 }
 .markdown-section h22::before {
   content: "H22";
@@ -547,10 +485,7 @@ body.sticky .sidebar-toggle {
   padding: 0 0.3rem;
 }
 .markdown-section h23 {
-  display: inline-block;
-  font-weight: bold;
-  margin: 0;
-  padding: 0;
+  display: block;
 }
 .markdown-section h23::before {
   content: "H23";
@@ -558,10 +493,7 @@ body.sticky .sidebar-toggle {
   padding: 0 0.3rem;
 }
 .markdown-section h24 {
-  display: inline-block;
-  font-weight: bold;
-  margin: 0;
-  padding: 0;
+  display: block;
 }
 .markdown-section h24::before {
   content: "H24";
@@ -569,10 +501,7 @@ body.sticky .sidebar-toggle {
   padding: 0 0.3rem;
 }
 .markdown-section h25 {
-  display: inline-block;
-  font-weight: bold;
-  margin: 0;
-  padding: 0;
+  display: block;
 }
 .markdown-section h25::before {
   content: "H25";
@@ -580,10 +509,7 @@ body.sticky .sidebar-toggle {
   padding: 0 0.3rem;
 }
 .markdown-section h26 {
-  display: inline-block;
-  font-weight: bold;
-  margin: 0;
-  padding: 0;
+  display: block;
 }
 .markdown-section h26::before {
   content: "H26";
@@ -591,10 +517,7 @@ body.sticky .sidebar-toggle {
   padding: 0 0.3rem;
 }
 .markdown-section h27 {
-  display: inline-block;
-  font-weight: bold;
-  margin: 0;
-  padding: 0;
+  display: block;
 }
 .markdown-section h27::before {
   content: "H27";
@@ -602,10 +525,7 @@ body.sticky .sidebar-toggle {
   padding: 0 0.3rem;
 }
 .markdown-section h28 {
-  display: inline-block;
-  font-weight: bold;
-  margin: 0;
-  padding: 0;
+  display: block;
 }
 .markdown-section h28::before {
   content: "H28";
@@ -613,10 +533,7 @@ body.sticky .sidebar-toggle {
   padding: 0 0.3rem;
 }
 .markdown-section h29 {
-  display: inline-block;
-  font-weight: bold;
-  margin: 0;
-  padding: 0;
+  display: block;
 }
 .markdown-section h29::before {
   content: "H29";
@@ -624,10 +541,7 @@ body.sticky .sidebar-toggle {
   padding: 0 0.3rem;
 }
 .markdown-section h30 {
-  display: inline-block;
-  font-weight: bold;
-  margin: 0;
-  padding: 0;
+  display: block;
 }
 .markdown-section h30::before {
   content: "H30";
@@ -635,10 +549,7 @@ body.sticky .sidebar-toggle {
   padding: 0 0.3rem;
 }
 .markdown-section h31 {
-  display: inline-block;
-  font-weight: bold;
-  margin: 0;
-  padding: 0;
+  display: block;
 }
 .markdown-section h31::before {
   content: "H31";
@@ -646,10 +557,7 @@ body.sticky .sidebar-toggle {
   padding: 0 0.3rem;
 }
 .markdown-section h32 {
-  display: inline-block;
-  font-weight: bold;
-  margin: 0;
-  padding: 0;
+  display: block;
 }
 .markdown-section h32::before {
   content: "H32";
@@ -657,10 +565,7 @@ body.sticky .sidebar-toggle {
   padding: 0 0.3rem;
 }
 .markdown-section h33 {
-  display: inline-block;
-  font-weight: bold;
-  margin: 0;
-  padding: 0;
+  display: block;
 }
 .markdown-section h33::before {
   content: "H33";
@@ -668,10 +573,7 @@ body.sticky .sidebar-toggle {
   padding: 0 0.3rem;
 }
 .markdown-section h34 {
-  display: inline-block;
-  font-weight: bold;
-  margin: 0;
-  padding: 0;
+  display: block;
 }
 .markdown-section h34::before {
   content: "H34";
@@ -679,10 +581,7 @@ body.sticky .sidebar-toggle {
   padding: 0 0.3rem;
 }
 .markdown-section h35 {
-  display: inline-block;
-  font-weight: bold;
-  margin: 0;
-  padding: 0;
+  display: block;
 }
 .markdown-section h35::before {
   content: "H35";
@@ -690,10 +589,7 @@ body.sticky .sidebar-toggle {
   padding: 0 0.3rem;
 }
 .markdown-section h36 {
-  display: inline-block;
-  font-weight: bold;
-  margin: 0;
-  padding: 0;
+  display: block;
 }
 .markdown-section h36::before {
   content: "H36";
@@ -701,10 +597,7 @@ body.sticky .sidebar-toggle {
   padding: 0 0.3rem;
 }
 .markdown-section h37 {
-  display: inline-block;
-  font-weight: bold;
-  margin: 0;
-  padding: 0;
+  display: block;
 }
 .markdown-section h37::before {
   content: "H37";
@@ -712,10 +605,7 @@ body.sticky .sidebar-toggle {
   padding: 0 0.3rem;
 }
 .markdown-section h38 {
-  display: inline-block;
-  font-weight: bold;
-  margin: 0;
-  padding: 0;
+  display: block;
 }
 .markdown-section h38::before {
   content: "H38";
@@ -723,10 +613,7 @@ body.sticky .sidebar-toggle {
   padding: 0 0.3rem;
 }
 .markdown-section h39 {
-  display: inline-block;
-  font-weight: bold;
-  margin: 0;
-  padding: 0;
+  display: block;
 }
 .markdown-section h39::before {
   content: "H39";
@@ -734,10 +621,7 @@ body.sticky .sidebar-toggle {
   padding: 0 0.3rem;
 }
 .markdown-section h40 {
-  display: inline-block;
-  font-weight: bold;
-  margin: 0;
-  padding: 0;
+  display: block;
 }
 .markdown-section h40::before {
   content: "H40";
@@ -745,10 +629,7 @@ body.sticky .sidebar-toggle {
   padding: 0 0.3rem;
 }
 .markdown-section h41 {
-  display: inline-block;
-  font-weight: bold;
-  margin: 0;
-  padding: 0;
+  display: block;
 }
 .markdown-section h41::before {
   content: "H41";
@@ -756,10 +637,7 @@ body.sticky .sidebar-toggle {
   padding: 0 0.3rem;
 }
 .markdown-section h42 {
-  display: inline-block;
-  font-weight: bold;
-  margin: 0;
-  padding: 0;
+  display: block;
 }
 .markdown-section h42::before {
   content: "H42";
@@ -767,10 +645,7 @@ body.sticky .sidebar-toggle {
   padding: 0 0.3rem;
 }
 .markdown-section h43 {
-  display: inline-block;
-  font-weight: bold;
-  margin: 0;
-  padding: 0;
+  display: block;
 }
 .markdown-section h43::before {
   content: "H43";
@@ -778,10 +653,7 @@ body.sticky .sidebar-toggle {
   padding: 0 0.3rem;
 }
 .markdown-section h44 {
-  display: inline-block;
-  font-weight: bold;
-  margin: 0;
-  padding: 0;
+  display: block;
 }
 .markdown-section h44::before {
   content: "H44";
@@ -789,10 +661,7 @@ body.sticky .sidebar-toggle {
   padding: 0 0.3rem;
 }
 .markdown-section h45 {
-  display: inline-block;
-  font-weight: bold;
-  margin: 0;
-  padding: 0;
+  display: block;
 }
 .markdown-section h45::before {
   content: "H45";
@@ -800,10 +669,7 @@ body.sticky .sidebar-toggle {
   padding: 0 0.3rem;
 }
 .markdown-section h46 {
-  display: inline-block;
-  font-weight: bold;
-  margin: 0;
-  padding: 0;
+  display: block;
 }
 .markdown-section h46::before {
   content: "H46";
@@ -811,10 +677,7 @@ body.sticky .sidebar-toggle {
   padding: 0 0.3rem;
 }
 .markdown-section h47 {
-  display: inline-block;
-  font-weight: bold;
-  margin: 0;
-  padding: 0;
+  display: block;
 }
 .markdown-section h47::before {
   content: "H47";
@@ -822,10 +685,7 @@ body.sticky .sidebar-toggle {
   padding: 0 0.3rem;
 }
 .markdown-section h48 {
-  display: inline-block;
-  font-weight: bold;
-  margin: 0;
-  padding: 0;
+  display: block;
 }
 .markdown-section h48::before {
   content: "H48";
@@ -833,10 +693,7 @@ body.sticky .sidebar-toggle {
   padding: 0 0.3rem;
 }
 .markdown-section h49 {
-  display: inline-block;
-  font-weight: bold;
-  margin: 0;
-  padding: 0;
+  display: block;
 }
 .markdown-section h49::before {
   content: "H49";
@@ -844,10 +701,7 @@ body.sticky .sidebar-toggle {
   padding: 0 0.3rem;
 }
 .markdown-section h50 {
-  display: inline-block;
-  font-weight: bold;
-  margin: 0;
-  padding: 0;
+  display: block;
 }
 .markdown-section h50::before {
   content: "H50";
@@ -855,10 +709,7 @@ body.sticky .sidebar-toggle {
   padding: 0 0.3rem;
 }
 .markdown-section h51 {
-  display: inline-block;
-  font-weight: bold;
-  margin: 0;
-  padding: 0;
+  display: block;
 }
 .markdown-section h51::before {
   content: "H51";
@@ -866,10 +717,7 @@ body.sticky .sidebar-toggle {
   padding: 0 0.3rem;
 }
 .markdown-section h52 {
-  display: inline-block;
-  font-weight: bold;
-  margin: 0;
-  padding: 0;
+  display: block;
 }
 .markdown-section h52::before {
   content: "H52";
@@ -877,10 +725,7 @@ body.sticky .sidebar-toggle {
   padding: 0 0.3rem;
 }
 .markdown-section h53 {
-  display: inline-block;
-  font-weight: bold;
-  margin: 0;
-  padding: 0;
+  display: block;
 }
 .markdown-section h53::before {
   content: "H53";
@@ -888,10 +733,7 @@ body.sticky .sidebar-toggle {
   padding: 0 0.3rem;
 }
 .markdown-section h54 {
-  display: inline-block;
-  font-weight: bold;
-  margin: 0;
-  padding: 0;
+  display: block;
 }
 .markdown-section h54::before {
   content: "H54";
@@ -899,10 +741,7 @@ body.sticky .sidebar-toggle {
   padding: 0 0.3rem;
 }
 .markdown-section h55 {
-  display: inline-block;
-  font-weight: bold;
-  margin: 0;
-  padding: 0;
+  display: block;
 }
 .markdown-section h55::before {
   content: "H55";
@@ -910,10 +749,7 @@ body.sticky .sidebar-toggle {
   padding: 0 0.3rem;
 }
 .markdown-section h56 {
-  display: inline-block;
-  font-weight: bold;
-  margin: 0;
-  padding: 0;
+  display: block;
 }
 .markdown-section h56::before {
   content: "H56";
@@ -921,10 +757,7 @@ body.sticky .sidebar-toggle {
   padding: 0 0.3rem;
 }
 .markdown-section h57 {
-  display: inline-block;
-  font-weight: bold;
-  margin: 0;
-  padding: 0;
+  display: block;
 }
 .markdown-section h57::before {
   content: "H57";
@@ -932,10 +765,7 @@ body.sticky .sidebar-toggle {
   padding: 0 0.3rem;
 }
 .markdown-section h58 {
-  display: inline-block;
-  font-weight: bold;
-  margin: 0;
-  padding: 0;
+  display: block;
 }
 .markdown-section h58::before {
   content: "H58";
@@ -943,10 +773,7 @@ body.sticky .sidebar-toggle {
   padding: 0 0.3rem;
 }
 .markdown-section h59 {
-  display: inline-block;
-  font-weight: bold;
-  margin: 0;
-  padding: 0;
+  display: block;
 }
 .markdown-section h59::before {
   content: "H59";
@@ -954,10 +781,7 @@ body.sticky .sidebar-toggle {
   padding: 0 0.3rem;
 }
 .markdown-section h60 {
-  display: inline-block;
-  font-weight: bold;
-  margin: 0;
-  padding: 0;
+  display: block;
 }
 .markdown-section h60::before {
   content: "H60";
@@ -965,10 +789,7 @@ body.sticky .sidebar-toggle {
   padding: 0 0.3rem;
 }
 .markdown-section h61 {
-  display: inline-block;
-  font-weight: bold;
-  margin: 0;
-  padding: 0;
+  display: block;
 }
 .markdown-section h61::before {
   content: "H61";
@@ -976,10 +797,7 @@ body.sticky .sidebar-toggle {
   padding: 0 0.3rem;
 }
 .markdown-section h62 {
-  display: inline-block;
-  font-weight: bold;
-  margin: 0;
-  padding: 0;
+  display: block;
 }
 .markdown-section h62::before {
   content: "H62";
@@ -987,10 +805,7 @@ body.sticky .sidebar-toggle {
   padding: 0 0.3rem;
 }
 .markdown-section h63 {
-  display: inline-block;
-  font-weight: bold;
-  margin: 0;
-  padding: 0;
+  display: block;
 }
 .markdown-section h63::before {
   content: "H63";
@@ -998,10 +813,7 @@ body.sticky .sidebar-toggle {
   padding: 0 0.3rem;
 }
 .markdown-section h64 {
-  display: inline-block;
-  font-weight: bold;
-  margin: 0;
-  padding: 0;
+  display: block;
 }
 .markdown-section h64::before {
   content: "H64";
@@ -1009,10 +821,7 @@ body.sticky .sidebar-toggle {
   padding: 0 0.3rem;
 }
 .markdown-section h65 {
-  display: inline-block;
-  font-weight: bold;
-  margin: 0;
-  padding: 0;
+  display: block;
 }
 .markdown-section h65::before {
   content: "H65";
@@ -1020,10 +829,7 @@ body.sticky .sidebar-toggle {
   padding: 0 0.3rem;
 }
 .markdown-section h66 {
-  display: inline-block;
-  font-weight: bold;
-  margin: 0;
-  padding: 0;
+  display: block;
 }
 .markdown-section h66::before {
   content: "H66";
@@ -1031,10 +837,7 @@ body.sticky .sidebar-toggle {
   padding: 0 0.3rem;
 }
 .markdown-section h67 {
-  display: inline-block;
-  font-weight: bold;
-  margin: 0;
-  padding: 0;
+  display: block;
 }
 .markdown-section h67::before {
   content: "H67";
@@ -1042,10 +845,7 @@ body.sticky .sidebar-toggle {
   padding: 0 0.3rem;
 }
 .markdown-section h68 {
-  display: inline-block;
-  font-weight: bold;
-  margin: 0;
-  padding: 0;
+  display: block;
 }
 .markdown-section h68::before {
   content: "H68";
@@ -1053,10 +853,7 @@ body.sticky .sidebar-toggle {
   padding: 0 0.3rem;
 }
 .markdown-section h69 {
-  display: inline-block;
-  font-weight: bold;
-  margin: 0;
-  padding: 0;
+  display: block;
 }
 .markdown-section h69::before {
   content: "H69";
@@ -1064,10 +861,7 @@ body.sticky .sidebar-toggle {
   padding: 0 0.3rem;
 }
 .markdown-section h70 {
-  display: inline-block;
-  font-weight: bold;
-  margin: 0;
-  padding: 0;
+  display: block;
 }
 .markdown-section h70::before {
   content: "H70";
@@ -1075,10 +869,7 @@ body.sticky .sidebar-toggle {
   padding: 0 0.3rem;
 }
 .markdown-section h71 {
-  display: inline-block;
-  font-weight: bold;
-  margin: 0;
-  padding: 0;
+  display: block;
 }
 .markdown-section h71::before {
   content: "H71";
@@ -1086,10 +877,7 @@ body.sticky .sidebar-toggle {
   padding: 0 0.3rem;
 }
 .markdown-section h72 {
-  display: inline-block;
-  font-weight: bold;
-  margin: 0;
-  padding: 0;
+  display: block;
 }
 .markdown-section h72::before {
   content: "H72";
@@ -1097,10 +885,7 @@ body.sticky .sidebar-toggle {
   padding: 0 0.3rem;
 }
 .markdown-section h73 {
-  display: inline-block;
-  font-weight: bold;
-  margin: 0;
-  padding: 0;
+  display: block;
 }
 .markdown-section h73::before {
   content: "H73";
@@ -1108,10 +893,7 @@ body.sticky .sidebar-toggle {
   padding: 0 0.3rem;
 }
 .markdown-section h74 {
-  display: inline-block;
-  font-weight: bold;
-  margin: 0;
-  padding: 0;
+  display: block;
 }
 .markdown-section h74::before {
   content: "H74";
@@ -1119,10 +901,7 @@ body.sticky .sidebar-toggle {
   padding: 0 0.3rem;
 }
 .markdown-section h75 {
-  display: inline-block;
-  font-weight: bold;
-  margin: 0;
-  padding: 0;
+  display: block;
 }
 .markdown-section h75::before {
   content: "H75";
@@ -1130,10 +909,7 @@ body.sticky .sidebar-toggle {
   padding: 0 0.3rem;
 }
 .markdown-section h76 {
-  display: inline-block;
-  font-weight: bold;
-  margin: 0;
-  padding: 0;
+  display: block;
 }
 .markdown-section h76::before {
   content: "H76";
@@ -1141,10 +917,7 @@ body.sticky .sidebar-toggle {
   padding: 0 0.3rem;
 }
 .markdown-section h77 {
-  display: inline-block;
-  font-weight: bold;
-  margin: 0;
-  padding: 0;
+  display: block;
 }
 .markdown-section h77::before {
   content: "H77";
@@ -1152,10 +925,7 @@ body.sticky .sidebar-toggle {
   padding: 0 0.3rem;
 }
 .markdown-section h78 {
-  display: inline-block;
-  font-weight: bold;
-  margin: 0;
-  padding: 0;
+  display: block;
 }
 .markdown-section h78::before {
   content: "H78";
@@ -1163,10 +933,7 @@ body.sticky .sidebar-toggle {
   padding: 0 0.3rem;
 }
 .markdown-section h79 {
-  display: inline-block;
-  font-weight: bold;
-  margin: 0;
-  padding: 0;
+  display: block;
 }
 .markdown-section h79::before {
   content: "H79";
@@ -1174,10 +941,7 @@ body.sticky .sidebar-toggle {
   padding: 0 0.3rem;
 }
 .markdown-section h80 {
-  display: inline-block;
-  font-weight: bold;
-  margin: 0;
-  padding: 0;
+  display: block;
 }
 .markdown-section h80::before {
   content: "H80";
@@ -1185,10 +949,7 @@ body.sticky .sidebar-toggle {
   padding: 0 0.3rem;
 }
 .markdown-section h81 {
-  display: inline-block;
-  font-weight: bold;
-  margin: 0;
-  padding: 0;
+  display: block;
 }
 .markdown-section h81::before {
   content: "H81";
@@ -1196,10 +957,7 @@ body.sticky .sidebar-toggle {
   padding: 0 0.3rem;
 }
 .markdown-section h82 {
-  display: inline-block;
-  font-weight: bold;
-  margin: 0;
-  padding: 0;
+  display: block;
 }
 .markdown-section h82::before {
   content: "H82";
@@ -1207,10 +965,7 @@ body.sticky .sidebar-toggle {
   padding: 0 0.3rem;
 }
 .markdown-section h83 {
-  display: inline-block;
-  font-weight: bold;
-  margin: 0;
-  padding: 0;
+  display: block;
 }
 .markdown-section h83::before {
   content: "H83";
@@ -1218,10 +973,7 @@ body.sticky .sidebar-toggle {
   padding: 0 0.3rem;
 }
 .markdown-section h84 {
-  display: inline-block;
-  font-weight: bold;
-  margin: 0;
-  padding: 0;
+  display: block;
 }
 .markdown-section h84::before {
   content: "H84";
@@ -1229,10 +981,7 @@ body.sticky .sidebar-toggle {
   padding: 0 0.3rem;
 }
 .markdown-section h85 {
-  display: inline-block;
-  font-weight: bold;
-  margin: 0;
-  padding: 0;
+  display: block;
 }
 .markdown-section h85::before {
   content: "H85";
@@ -1240,10 +989,7 @@ body.sticky .sidebar-toggle {
   padding: 0 0.3rem;
 }
 .markdown-section h86 {
-  display: inline-block;
-  font-weight: bold;
-  margin: 0;
-  padding: 0;
+  display: block;
 }
 .markdown-section h86::before {
   content: "H86";
@@ -1251,10 +997,7 @@ body.sticky .sidebar-toggle {
   padding: 0 0.3rem;
 }
 .markdown-section h87 {
-  display: inline-block;
-  font-weight: bold;
-  margin: 0;
-  padding: 0;
+  display: block;
 }
 .markdown-section h87::before {
   content: "H87";
@@ -1262,10 +1005,7 @@ body.sticky .sidebar-toggle {
   padding: 0 0.3rem;
 }
 .markdown-section h88 {
-  display: inline-block;
-  font-weight: bold;
-  margin: 0;
-  padding: 0;
+  display: block;
 }
 .markdown-section h88::before {
   content: "H88";
@@ -1273,10 +1013,7 @@ body.sticky .sidebar-toggle {
   padding: 0 0.3rem;
 }
 .markdown-section h89 {
-  display: inline-block;
-  font-weight: bold;
-  margin: 0;
-  padding: 0;
+  display: block;
 }
 .markdown-section h89::before {
   content: "H89";
@@ -1284,10 +1021,7 @@ body.sticky .sidebar-toggle {
   padding: 0 0.3rem;
 }
 .markdown-section h90 {
-  display: inline-block;
-  font-weight: bold;
-  margin: 0;
-  padding: 0;
+  display: block;
 }
 .markdown-section h90::before {
   content: "H90";
@@ -1295,10 +1029,7 @@ body.sticky .sidebar-toggle {
   padding: 0 0.3rem;
 }
 .markdown-section h91 {
-  display: inline-block;
-  font-weight: bold;
-  margin: 0;
-  padding: 0;
+  display: block;
 }
 .markdown-section h91::before {
   content: "H91";
@@ -1306,10 +1037,7 @@ body.sticky .sidebar-toggle {
   padding: 0 0.3rem;
 }
 .markdown-section h92 {
-  display: inline-block;
-  font-weight: bold;
-  margin: 0;
-  padding: 0;
+  display: block;
 }
 .markdown-section h92::before {
   content: "H92";
@@ -1317,10 +1045,7 @@ body.sticky .sidebar-toggle {
   padding: 0 0.3rem;
 }
 .markdown-section h93 {
-  display: inline-block;
-  font-weight: bold;
-  margin: 0;
-  padding: 0;
+  display: block;
 }
 .markdown-section h93::before {
   content: "H93";
@@ -1328,10 +1053,7 @@ body.sticky .sidebar-toggle {
   padding: 0 0.3rem;
 }
 .markdown-section h94 {
-  display: inline-block;
-  font-weight: bold;
-  margin: 0;
-  padding: 0;
+  display: block;
 }
 .markdown-section h94::before {
   content: "H94";
@@ -1339,10 +1061,7 @@ body.sticky .sidebar-toggle {
   padding: 0 0.3rem;
 }
 .markdown-section h95 {
-  display: inline-block;
-  font-weight: bold;
-  margin: 0;
-  padding: 0;
+  display: block;
 }
 .markdown-section h95::before {
   content: "H95";
@@ -1350,10 +1069,7 @@ body.sticky .sidebar-toggle {
   padding: 0 0.3rem;
 }
 .markdown-section h96 {
-  display: inline-block;
-  font-weight: bold;
-  margin: 0;
-  padding: 0;
+  display: block;
 }
 .markdown-section h96::before {
   content: "H96";
@@ -1361,10 +1077,7 @@ body.sticky .sidebar-toggle {
   padding: 0 0.3rem;
 }
 .markdown-section h97 {
-  display: inline-block;
-  font-weight: bold;
-  margin: 0;
-  padding: 0;
+  display: block;
 }
 .markdown-section h97::before {
   content: "H97";
@@ -1372,10 +1085,7 @@ body.sticky .sidebar-toggle {
   padding: 0 0.3rem;
 }
 .markdown-section h98 {
-  display: inline-block;
-  font-weight: bold;
-  margin: 0;
-  padding: 0;
+  display: block;
 }
 .markdown-section h98::before {
   content: "H98";
@@ -1383,10 +1093,7 @@ body.sticky .sidebar-toggle {
   padding: 0 0.3rem;
 }
 .markdown-section h99 {
-  display: inline-block;
-  font-weight: bold;
-  margin: 0;
-  padding: 0;
+  display: block;
 }
 .markdown-section h99::before {
   content: "H99";
@@ -1394,10 +1101,7 @@ body.sticky .sidebar-toggle {
   padding: 0 0.3rem;
 }
 .markdown-section h100 {
-  display: inline-block;
-  font-weight: bold;
-  margin: 0;
-  padding: 0;
+  display: block;
 }
 .markdown-section h100::before {
   content: "H100";
@@ -1405,10 +1109,7 @@ body.sticky .sidebar-toggle {
   padding: 0 0.3rem;
 }
 .markdown-section h101 {
-  display: inline-block;
-  font-weight: bold;
-  margin: 0;
-  padding: 0;
+  display: block;
 }
 .markdown-section h101::before {
   content: "H101";
@@ -1416,10 +1117,7 @@ body.sticky .sidebar-toggle {
   padding: 0 0.3rem;
 }
 .markdown-section h102 {
-  display: inline-block;
-  font-weight: bold;
-  margin: 0;
-  padding: 0;
+  display: block;
 }
 .markdown-section h102::before {
   content: "H102";
@@ -1427,10 +1125,7 @@ body.sticky .sidebar-toggle {
   padding: 0 0.3rem;
 }
 .markdown-section h103 {
-  display: inline-block;
-  font-weight: bold;
-  margin: 0;
-  padding: 0;
+  display: block;
 }
 .markdown-section h103::before {
   content: "H103";
@@ -1438,10 +1133,7 @@ body.sticky .sidebar-toggle {
   padding: 0 0.3rem;
 }
 .markdown-section h104 {
-  display: inline-block;
-  font-weight: bold;
-  margin: 0;
-  padding: 0;
+  display: block;
 }
 .markdown-section h104::before {
   content: "H104";
@@ -1449,10 +1141,7 @@ body.sticky .sidebar-toggle {
   padding: 0 0.3rem;
 }
 .markdown-section h105 {
-  display: inline-block;
-  font-weight: bold;
-  margin: 0;
-  padding: 0;
+  display: block;
 }
 .markdown-section h105::before {
   content: "H105";
@@ -1460,10 +1149,7 @@ body.sticky .sidebar-toggle {
   padding: 0 0.3rem;
 }
 .markdown-section h106 {
-  display: inline-block;
-  font-weight: bold;
-  margin: 0;
-  padding: 0;
+  display: block;
 }
 .markdown-section h106::before {
   content: "H106";
@@ -1471,10 +1157,7 @@ body.sticky .sidebar-toggle {
   padding: 0 0.3rem;
 }
 .markdown-section h107 {
-  display: inline-block;
-  font-weight: bold;
-  margin: 0;
-  padding: 0;
+  display: block;
 }
 .markdown-section h107::before {
   content: "H107";
@@ -1482,10 +1165,7 @@ body.sticky .sidebar-toggle {
   padding: 0 0.3rem;
 }
 .markdown-section h108 {
-  display: inline-block;
-  font-weight: bold;
-  margin: 0;
-  padding: 0;
+  display: block;
 }
 .markdown-section h108::before {
   content: "H108";
@@ -2175,7 +1855,7 @@ body.close .content {
     max-width: 98%;
   }
   body {
-    font-size: 18px;
+    font-size: 16px;
   }
   body.close .sidebar {
     transform: translateX(480px);
@@ -2201,6 +1881,20 @@ body.close .content {
     -webkit-animation: octocat-wave 560ms ease-in-out;
             animation: octocat-wave 560ms ease-in-out;
   }
+}
+.sidebar-nav > ul,
+.sidebar-nav > ul > ul {
+  display: block !important;
+}
+.parent,
+.sibling {
+  display: block !important;
+}
+.closed:before {
+  content: '+' !important;
+}
+.current span {
+  color: #c94922;
 }
 @-webkit-keyframes octocat-wave {
   0%, 100% {
