@@ -26,10 +26,9 @@
       '>': '&gt;',
       '"': '&quot;',
       "'": '&#39;',
-      '/': '&#x2F;',
     };
 
-    return String(string).replace(/[&<>"'/]/g, function (s) { return entityMap[s]; });
+    return String(string).replace(/[&<>"']/g, function (s) { return entityMap[s]; });
   }
 
   function getAllPaths(router) {
@@ -69,7 +68,7 @@
 
     tokens.forEach(function (token) {
       if (token.type === 'heading' && token.depth <= depth) {
-        slug = router.toURL(path, { id: slugify(token.text) });
+        slug = router.toURL(path, { id: slugify(escapeHtml(token.text)) });
         index[slug] = { slug: slug, title: token.text, body: '' };
       } else {
         if (!slug) {

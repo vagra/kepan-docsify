@@ -56,7 +56,7 @@ body {
   -webkit-font-smoothing: antialiased;
   color: #34495e;
   font-family: "Source Sans Pro", -apple-system, "Noto Sans", "Helvetica Neue", Helvetica, "Nimbus Sans L", Arial, "Liberation Sans", "PingFang SC", "Hiragino Sans GB", "Noto Sans CJK SC", "Source Han Sans SC", "Source Han Sans CN", "Microsoft YaHei", "Wenquanyi Micro Hei", "WenQuanYi Zen Hei", "ST Heiti", SimHei, "WenQuanYi Zen Hei Sharp", sans-serif;
-  font-size: 14px;
+  font-size: 15px;
   letter-spacing: 0;
   margin: 0;
   overflow-x: hidden;
@@ -86,7 +86,7 @@ li input[type='checkbox'] {
   margin: 25px 60px 0 0;
   position: absolute;
   right: 0;
-  font-size: 16px;
+  font-size: 15px;
   text-align: right;
   z-index: 10;
 /* navbar dropdown */
@@ -121,7 +121,7 @@ li input[type='checkbox'] {
 }
 .app-nav li {
   display: inline-block;
-  margin: 0 0.5rem;
+  margin: 0 1rem;
   padding: 5px 0;
   position: relative;
   cursor: pointer;
@@ -214,7 +214,7 @@ main.hidden {
 .sidebar > h1 {
   margin: 0 auto 1rem;
   font-size: 1.5rem;
-  font-weight: lighter;
+  font-weight: 300;
   text-align: center;
 }
 .sidebar > h1 a {
@@ -226,14 +226,8 @@ main.hidden {
   position: static;
 }
 .sidebar .sidebar-nav {
-  line-height: 1.6em;
+  line-height: 2em;
   padding-bottom: 40px;
-}
-.sidebar li {
-  display: flex;
-}
-.sidebar li:before {
-  content: '-';
 }
 .sidebar li.collapse .app-sub-sidebar {
   display: none;
@@ -241,10 +235,9 @@ main.hidden {
 .sidebar ul {
   margin: 0 0 0 15px;
   padding: 0;
-  display: none;
 }
 .sidebar li > p {
-  font-weight: bold;
+  font-weight: 700;
   margin: 0;
 }
 .sidebar ul,
@@ -278,11 +271,11 @@ main.hidden {
   outline: none;
   padding: 10px;
   position: absolute;
-  top: 0;
+  bottom: 20px;
   left: 0;
   text-align: center;
   transition: opacity 0.3s;
-  width: 464px;
+  width: 32px;
   z-index: 30;
   cursor: pointer;
 }
@@ -1715,7 +1708,7 @@ body.sticky .sidebar-toggle {
 }
 .markdown-section {
   margin: 0 auto;
-  max-width: 95%;
+  max-width: 93%;
   padding: 30px 15px 40px 15px;
   position: relative;
 }
@@ -1856,7 +1849,7 @@ body.close .content {
     max-width: 98%;
   }
   body {
-    font-size: 16px;
+    font-size: 18px;
   }
   body.close .sidebar {
     transform: translateX(480px);
@@ -1883,16 +1876,45 @@ body.close .content {
             animation: octocat-wave 560ms ease-in-out;
   }
 }
-.sidebar-nav > ul,
-.sidebar-nav > ul > ul {
-  display: block !important;
+.app-sub-sidebar ul {
+  display: none;
 }
-.parent,
-.sibling {
-  display: block !important;
+.app-sub-sidebar ul.parent,
+.app-sub-sidebar ul.wife,
+.app-sub-sidebar ul.expand {
+  display: block;
 }
-.closed:before {
-  content: '+' !important;
+.app-sub-sidebar ul.parent.expand,
+.app-sub-sidebar ul.wife.expand {
+  display: none;
+}
+.app-sub-sidebar li span {
+  display: block;
+  width: 20px;
+  font-family: monospace;
+  font-weight: bold;
+  font-size: 20px;
+  float: left;
+}
+.app-sub-sidebar li span:after {
+  content: '-';
+}
+.app-sub-sidebar li span.change:after {
+  content: '-';
+}
+.app-sub-sidebar li.has-children > span:after {
+  content: '+';
+}
+.app-sub-sidebar li.has-children > span.change:after {
+  content: '-';
+}
+.app-sub-sidebar li.parent > span:after,
+.app-sub-sidebar li.has-children.active > span:after {
+  content: '-';
+}
+.app-sub-sidebar li.parent > span.change:after,
+.app-sub-sidebar li.has-children.active > span.change:after {
+  content: '+';
 }
 .current span {
   color: #c94922;
@@ -1958,7 +1980,7 @@ section.cover p {
 section.cover h1 {
   color: inherit;
   font-size: 2.5rem;
-  font-weight: lighter;
+  font-weight: 300;
   margin: 0.625rem 0 2.5rem;
   position: relative;
   text-align: center;
@@ -2024,7 +2046,7 @@ body {
   color: #364149;
 }
 .sidebar li {
-  margin: 0;
+  margin: 6px 0 6px 0;
 }
 .sidebar ul li a {
   color: #505d6b;
@@ -2039,43 +2061,39 @@ body {
   padding: 0;
 }
 .sidebar ul li.active > a {
-  border-bottom: 2px solid;
+  border-right: 2px solid;
   color: var(--theme-color, #42b983);
-  font-weight: bold;
-  display: inline-block;
-}
-.app-sub-sidebar li::before {
-  content: '-';
-  padding-right: 4px;
-  float: left;
+  font-weight: 600;
 }
 /* markdown content found on pages */
 .markdown-section strong {
   color: #2c3e50;
-  font-weight: bold;
+  font-weight: 600;
 }
 .markdown-section a {
   color: #505d6b;
 }
 .markdown-section h1 {
-  font-weight: normal;
   font-size: 2rem;
   margin: 0 0 1rem;
 }
 .markdown-section h2 {
-  font-weight: normal;
   font-size: 1.75rem;
   margin: 45px 0 0.8rem;
 }
 .markdown-section h3 {
-  font-weight: normal;
   font-size: 1.5rem;
   margin: 40px 0 0.6rem;
+}
+.markdown-section h1,
+.markdown-section h2,
+.markdown-section h3 {
+  font-weight: 500;
 }
 .markdown-section h4,
 .markdown-section h5,
 .markdown-section h6 {
-  font-weight: normal;
+  font-weight: 500;
   margin: 0;
   padding: 0;
 }
@@ -2104,7 +2122,7 @@ body {
   padding-left: 20px;
 }
 .markdown-section blockquote p {
-  font-weight: bold;
+  font-weight: 600;
   margin-left: 0;
 }
 .markdown-section iframe {
@@ -2243,7 +2261,7 @@ pre::after {
   color: #ccc;
   content: attr(data-lang);
   font-size: 0.6rem;
-  font-weight: bold;
+  font-weight: 600;
   height: 15px;
   line-height: 15px;
   padding: 5px 10px 0;

@@ -538,6 +538,17 @@
         target.nextSibling.classList.contains('app-sub-sidebar')
       ) {
         toggleClass(target.parentNode, 'collapse');
+      } else if (
+        target.nodeName === 'SPAN' &&
+        target.nextSibling &&
+        target.nextSibling.classList.contains('section-link')
+      ) {
+        toggleClass(target, 'change');
+
+        var expand = target.nextSibling.nextSibling;
+        if (expand && expand.nodeName === 'UL') {
+          toggleClass(expand, 'expand');
+        }
       }
     });
   }
@@ -642,6 +653,10 @@
 
   var isAbsolutePath = cached(function (path) {
     return /(:|(\/{2}))/g.test(path);
+  });
+
+  var removeParams = cached(function (path) {
+    return path.split(/[?#]/)[0];
   });
 
   var getParentPath = cached(function (path) {
@@ -847,7 +862,7 @@
 
     var sidebar = getNode('.sidebar');
     var anchors = findAll('.anchor');
-    var wrap = find(sidebar, '.sidebar-nav');
+    var wrap = find(sidebar, '.app-sub-sidebar');
     var active = find(sidebar, 'li.active');
     var doc = document.documentElement;
     var top = ((doc && doc.scrollTop) || document.body.scrollTop) - coverHeight;
@@ -871,8 +886,7 @@
       return;
     }
 
-    var li =
-      nav[getNavKey(decodeURIComponent(path), last.getAttribute('data-id'))];
+    var li = nav[getNavKey(path, last.getAttribute('data-id'))];
 
     if (!li || li === active) {
       return;
@@ -900,59 +914,28 @@
   }
 
   function updateTree(active) {
-    var prev_parents = findAll('.parent');
-    var prev_siblings = findAll('.sibling');
-    var prev_closeds = findAll('.closed');
+    var prevParents = findAll('.parent');
+    var prevWifes = findAll('.wife');
+    var prevChanges = findAll('.change');
+    var prevExpands = findAll('.expand');
 
-    prev_parents.forEach(function (node) { return node.classList.remove('parent'); });
-    prev_siblings.forEach(function (node) { return node.classList.remove('sibling'); });
-    prev_closeds.forEach(function (node) { return node.classList.remove('closed'); });
+    prevParents.forEach(function (node) { return node.classList.remove('parent'); });
+    prevWifes.forEach(function (node) { return node.classList.remove('wife'); });
+    prevChanges.forEach(function (node) { return node.classList.remove('change'); });
+    prevExpands.forEach(function (node) { return node.classList.remove('expand'); });
 
-    var test = active.parentNode;
-    while (test && test.className !== 'sidebar-nav') {
-      test.classList.add('parent');
-
-      var brothers = test.parentNode.childNodes;
-
-      brothers &&
-        brothers.forEach(function (node) {
-          if (
-            node.tagName === 'LI' &&
-            node.nextSibling &&
-            node.nextSibling.tagName === 'UL' &&
-            node.nextSibling !== test
-          ) {
-            node.classList.add('closed');
-          }
-        });
-
-      test = test.parentNode;
+    var father = active.parentNode;
+    while (father && father.className !== 'app-sub-sidebar') {
+      father.classList.add('parent');
+      father = father.parentNode;
     }
 
-    var siblings = active.parentNode.childNodes;
-    siblings &&
-      siblings.forEach(function (sbl) {
-        if (sbl.tagName === 'UL') {
-          sbl.classList.add('sibling');
-        }
-
-        var childs = sbl.childNodes;
-
-        childs &&
-          childs.forEach(function (cld) {
-            if (
-              cld.tagName === 'LI' &&
-              cld.nextSibling &&
-              cld.nextSibling.tagName === 'UL'
-            ) {
-              cld.classList.add('closed');
-            }
-          });
-      });
+    var wife = active.lastChild;
+    wife.nodeName === 'UL' && wife.classList.add('wife');
   }
 
   function getNavKey(path, id) {
-    return (path + "?id=" + id);
+    return ((decodeURIComponent(path)) + "?id=" + (decodeURIComponent(id)));
   }
 
   function scrollActiveSidebar(router) {
@@ -988,7 +971,7 @@
       }
     }
 
-    var path = router.getCurrentPath();
+    var path = removeParams(router.getCurrentPath());
     off('scroll', function () { return highlight(path); });
     on('scroll', function () { return highlight(path); });
     on(sidebar, 'mouseover', function () {
@@ -1005,8 +988,8 @@
     }
     var topMargin = config().topMargin;
 
-    var prev_sections = findAll('.current');
-    prev_sections.forEach(function (node) { return node.classList.remove('current'); });
+    var prevSections = findAll('.current');
+    prevSections.forEach(function (node) { return node.classList.remove('current'); });
 
     var section = find('#' + id);
     if (section) {
@@ -1018,7 +1001,7 @@
     var active = find(sidebar, 'li.active');
     active && active.classList.remove('active');
 
-    var li = nav[getNavKey(decodeURIComponent(path), decodeURIComponent(id))];
+    var li = nav[getNavKey(path, id)];
     if (li) {
       li.classList.add('active');
       updateTree(li);
@@ -1116,10 +1099,12 @@
    * Render tree
    * @param  {Array} toc Array of TOC section links
    * @param  {String} tpl TPL list
+   * @param  {Boolean} all using specified TPL for all level(true), or root only(false)
    * @return {String} Rendered tree
    */
-  function tree(toc, tpl) {
-    if ( tpl === void 0 ) tpl = '<ul class="app-sub-sidebar">{inner}</ul>';
+  function tree(toc, tpl, all) {
+    if ( tpl === void 0 ) tpl = '<ul>{inner}</ul>';
+    if ( all === void 0 ) all = false;
 
     if (!toc || !toc.length) {
       return '';
@@ -1127,11 +1112,19 @@
 
     var innerHTML = '';
     toc.forEach(function (node) {
-      innerHTML += "<li><a class=\"section-link lv" + (node.level) + "\" href=\"" + (node.slug) + "\">" + (node.title) + "</a></li>";
       if (node.children) {
-        innerHTML += tree(node.children, tpl);
+        innerHTML += "<li class=\"has-children\"><span></span><a class=\"section-link lv" + (node.level) + "\" href=\"" + (node.slug) + "\">" + (node.title) + "</a>";
+        if (!all) {
+          innerHTML += tree(node.children);
+        } else {
+          innerHTML += tree(node.children, tpl, true);
+        }
+      } else {
+        innerHTML += "<li><span></span><a class=\"section-link lv" + (node.level) + "\" href=\"" + (node.slug) + "\">" + (node.title) + "</a>";
       }
+      innerHTML += "</li>";
     });
+
     return tpl.replace('{inner}', innerHTML);
   }
 
@@ -4668,7 +4661,7 @@
       }
 
       var tree$1 = this.cacheTree[currentPath] || genTree(toc, level);
-      html = tree(tree$1, '<ul>{inner}</ul>');
+      html = tree(tree$1, '<ul class="app-sub-sidebar">{inner}</ul>');
       this.cacheTree[currentPath] = tree$1;
     }
 
@@ -4702,7 +4695,7 @@
 
     cacheTree[currentPath] = tree$1;
     this.toc = [];
-    return tree(tree$1);
+    return tree(tree$1, '<ul class="app-sub-sidebar">{inner}</ul>');
   };
 
   Compiler.prototype.header = function header (text, level) {
@@ -5880,6 +5873,7 @@
     parseQuery: parseQuery,
     stringifyQuery: stringifyQuery,
     isAbsolutePath: isAbsolutePath,
+    removeParams: removeParams,
     getParentPath: getParentPath,
     cleanPath: cleanPath,
     resolvePath: resolvePath,
