@@ -192,23 +192,20 @@ marked 是 github 上的一个开源项目，它是一个用 javascript 开发�
 用起来，有两种方式。
 
 #3 在个人电脑上使用
-由于浏览器的安全设置，直接双击 index.htm 是没法读取 md 文档的，需要启动一个 Web 服务器，然后通过浏览器来访问。
+由于浏览器的安全设置，直接双击 index.htm 是没法读取 md 文档的，需要启动一个网页服务器，然后通过浏览器来访问。
 
-1. 作为最简单的 Web 服务器解决方案，建议是下载安装 Python3 ：
-    - 下载地址： https://www.python.org/downloads/windows/
-    - 下载最新版的 `Windows x86-64 executable installer` 即可；
-    - 安装时一定要勾选下面的 `Add Python 3.x to PATH` 选项：
-    ![Install Python](assets/Install_Python.jpg)
+1. 在硬盘上合适的位置创建一个文件夹，作为本地网站的根目录；
 
+2. 解压 `kepan-docsify.zip` ，把里面的文件全都复制到这个文件夹；
 
-2. 在硬盘上合适的位置创建一个文件夹，作为本地网站的根目录；
-
-3. 解压 kepan-docsify.zip ，把里面的文件全都复制到这个文件夹；
+3. 网页服务器有两个选择，一个是安装 Python ，一个是直接在本站下载 Ran ，后者小巧玲珑，使用方便。
+   - [使用 Python 做网页服务器](help/python)
+   - [使用 Ran 做网页服务器](help/ran)
 
 4. 双击 server.cmd 启动简单 Web 服务器，不要关闭命令窗口；
 关闭窗口，Web 服务就关闭了。
 
-5. 然后用浏览器访问 http://localhost 即可。
+5. 然后用浏览器访问 `http://localhost` 即可。
 
 #3 有服务器？那就架个网站
 
@@ -216,7 +213,7 @@ marked 是 github 上的一个开源项目，它是一个用 javascript 开发�
 
 2. 适当设置，让这个文件夹可以通过网址访问；
 
-3. 解压 kepan-docsify.zip ，把里面的文件通过 FTP 上传到这个文件夹；
+3. 解压 `kepan-docsify.zip` ，把里面的文件通过 FTP 上传到这个文件夹；
 
 4. 然后用浏览器访问对应的网址即可。
 
@@ -224,7 +221,7 @@ marked 是 github 上的一个开源项目，它是一个用 javascript 开发�
 
 默认情况下，每个子目录下，要有一个 README.md ，相当于这个子目录的默认首页。
 
-比方说，我们访问 http://localhost/#/help ，实际上访问到的是 `help/README.md` 。
+比方说，我们访问 `http://localhost/#/help` ，实际上访问到的是 `help/README.md` 。
 
 那么如果希望添加更多的页面该怎么办呢？可以照着下面的步骤实际操作。
 
