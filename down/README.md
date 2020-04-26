@@ -4,12 +4,10 @@
 
 #2 最新版本
 
-* 2020-04-25
-[kepan-docsify.4.11.3.7.zip](https://kepan.org/docsify/down/kepan-docsify.4.11.3.7.zip)
+* 2020-04-26
+[kepan-docsify.4.11.3.8.zip](https://kepan.org/docsify/down/kepan-docsify.4.11.3.8.zip)
 
-    * 放弃了引入谷歌字体。
-    * 优化了在手机上的界面表现，主要是正文标题和侧边栏。
-    * 鉴于 Python 的安装使用不一定方便，增加了 Ran 作为网页服务器，是一个只有 4M 多的 exe ，下载后解压到 kepan-docsify 目录下就可以使用了。
+    * 左边栏的目录展开层次太深的时候，之前，目录只能自动向下滚动，现在做了改进，让目录也能够自动向右滚动，这样使得当前条目总是会自动保持在侧边栏可见区域之内。
 
 #2 尚待改进
 > * 手机上的侧边栏，一直一来是只要点击侧边栏上的任何地方，侧边栏都会自动折叠。现在希望点击 `+` `-` 号的时候侧边栏不要折叠起来，只有点击链接的时候侧边栏才折叠。
@@ -27,6 +25,13 @@
     * https://gitee.com/pinsa/kepan-docsify
 
 #2 历史版本
+
+* 2020-04-25
+[kepan-docsify.4.11.3.7.zip](https://kepan.org/docsify/down/kepan-docsify.4.11.3.7.zip)
+
+    * 放弃了引入谷歌字体。
+    * 优化了在手机上的界面表现，主要是正文标题和侧边栏。
+    * 鉴于 Python 的安装使用不一定方便，增加了 Ran 作为网页服务器，是一个只有 4M 多的 exe ，下载后解压到 kepan-docsify 目录下就可以使用了。
 
 * 2020-04-24
 [kepan-docsify.4.11.3.6.zip](https://kepan.org/docsify/down/kepan-docsify.4.11.3.6.zip)

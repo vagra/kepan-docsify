@@ -227,6 +227,7 @@ main.hidden {
 .sidebar .sidebar-nav {
   line-height: 2em;
   padding-bottom: 40px;
+  display: grid;
 }
 .sidebar li.collapse .app-sub-sidebar {
   display: none;
@@ -246,6 +247,7 @@ main.hidden {
 .sidebar ul li a {
   border-bottom: none;
   display: block;
+  margin-left: 20px;
 }
 .sidebar ul li ul {
   padding-left: 20px;
@@ -1888,12 +1890,9 @@ body.close .content {
   display: none;
 }
 .app-sub-sidebar li span {
-  display: block;
-  width: 20px;
+  position: absolute;
   font-family: Consolas, "Courier New", "Lucida Console", Monaco, Courier, monospace;
-  font-weight: 700;
-  font-size: 20px;
-  float: left;
+  font-size: 24px;
 }
 .app-sub-sidebar li span:after {
   content: '-';

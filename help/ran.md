@@ -18,7 +18,7 @@
 - 双击 `server.cmd` ，就可以启动 Ran 作为网页服务器了。
 
 - 如果这时有防火墙的提示窗口，点击允许访问即可。
-![Firewall](assets/Firewall.gif)
+![Firewall](assets/Firewall.jpg)
 
 - 然后打开浏览器，访问 `http://localhost/` 就能看到这个本地网站了。
 

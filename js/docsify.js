@@ -911,6 +911,7 @@
 
       sidebar.scrollTop = top$1;
     }
+    sidebar.scrollLeft = 9999;
   }
 
   function updateTree(active) {
