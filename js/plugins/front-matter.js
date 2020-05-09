@@ -480,6 +480,15 @@
   }
 
   var install = function(hook, vm) {
+    // Used to remove front matter from embedded pages if installed.
+    vm.config.frontMatter = {};
+    vm.config.frontMatter.installed = true;
+    vm.config.frontMatter.parseMarkdown = function(content) {
+      var ref = extractor(content);
+      var body = ref.body;
+      return body;
+    };
+
     hook.beforeEach(function (content) {
       var ref = extractor(content);
       var attributes = ref.attributes;

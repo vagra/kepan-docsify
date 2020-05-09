@@ -1100,7 +1100,7 @@
    * Render tree
    * @param  {Array} toc Array of TOC section links
    * @param  {String} tpl TPL list
-   * @param  {Boolean} all using specified TPL for all level(true), or root only(false)
+   * @param  {Boolean} using specified TPL for all level(true), or root only(false)
    * @return {String} Rendered tree
    */
   function tree(toc, tpl, all) {
@@ -1222,6 +1222,26 @@
       .replace(/__colon__/g, ':');
   }
 
+  /**
+   * Converts a colon formatted string to a object with properties.
+   *
+   * This is process a provided string and look for any tokens in the format
+   * of `:name[=value]` and then convert it to a object and return.
+   * An example of this is ':include :type=code :fragment=demo' is taken and
+   * then converted to:
+   *
+   * ```
+   * {
+   *  include: '',
+   *  type: 'code',
+   *  fragment: 'demo'
+   * }
+   * ```
+   *
+   * @param {string}   str   The string to parse.
+   *
+   * @return {object}  The original string and parsed object, { str, config }.
+   */
   function getAndRemoveConfig(str) {
     if ( str === void 0 ) str = '';
 
@@ -4513,6 +4533,21 @@
     };
   };
 
+  /**
+   * Pulls content from file and renders inline on the page as a embedded item.
+   *
+   * This allows you to embed different file types on the returned
+   * page.
+   * The basic format is:
+   * ```
+   * [filename](_media/example.md ':include')
+   * ```
+   *
+   * @param {string} href The href to the file to embed in the page.
+   * @param {string} titleTitle of the link used to make the embed.
+   *
+   * @return {type} Return value description.
+   */
   Compiler.prototype.compileEmbed = function compileEmbed (href, title) {
     var ref = getAndRemoveConfig(title);
       var str = ref.str;
@@ -4781,6 +4816,13 @@
                 }
                 return x;
               });
+
+              // This may contain YAML front matter and will need to be stripped.
+              var frontMatterInstalled =
+                ($docsify.frontMatter || {}).installed || false;
+              if (frontMatterInstalled === true) {
+                text = $docsify.frontMatter.parseMarkdown(text);
+              }
 
               embedToken = compile.lexer(text);
             } else if (token.embed.type === 'code') {
