@@ -13,7 +13,7 @@ python -m http.server 80
 - 下载最新版的 `Windows x86-64 executable installer` 即可；
 
 - 安装时一定要勾选下面的 `Add Python 3.x to PATH` 选项：
-![Install Python](assets/Install_Python.jpg)
+![Install Python](/assets/Install_Python.jpg)
 
 装好 Python 以后，直接双击执行 kepan-docsify 目录下的 server.cmd ， Python 的网页服务器就启动了。
 

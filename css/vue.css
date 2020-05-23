@@ -120,7 +120,7 @@ li input[type='checkbox'] {
 }
 .app-nav li {
   display: inline-block;
-  margin: 0 1rem;
+  margin: 0 0.5rem;
   padding: 5px 0;
   position: relative;
   cursor: pointer;
@@ -2134,7 +2134,7 @@ body {
   border-radius: 2px;
   color: #e96900;
   font-family: 'Roboto Mono', Monaco, courier, monospace;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   margin: 0 2px;
   padding: 3px 5px;
   white-space: pre-wrap;
@@ -2236,7 +2236,7 @@ body {
   color: #525252;
   display: block;
   font-family: 'Roboto Mono', Monaco, courier, monospace;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   line-height: inherit;
   margin: 0 2px;
   max-width: inherit;

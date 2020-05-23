@@ -2,7 +2,7 @@
 
 如果觉得安装 Python 有点儿麻烦，或者 Python 安装后双击 server.cmd 无法正常启动网页服务器，那么，可以用这个 Ran ，它的中文名叫做“燃”：
 
-![Ran Logo](assets/Ran.gif)
+![Ran Logo](/assets/Ran.gif)
 
 #2 下载
 - 这个 Ran 很简单，就是一个 exe 文件，我放在这个网站了，点击下载即可：
@@ -18,7 +18,7 @@
 - 双击 `server.cmd` ，就可以启动 Ran 作为网页服务器了。
 
 - 如果这时有防火墙的提示窗口，点击允许访问即可。
-![Firewall](assets/Firewall.jpg)
+![Firewall](/assets/Firewall.jpg)
 
 - 然后打开浏览器，访问 `http://localhost/` 就能看到这个本地网站了。
 

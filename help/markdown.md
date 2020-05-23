@@ -15,7 +15,7 @@
 + **2011**年7月19日，因被控从 MIT 和 JSTOR 下载 480 万篇学术论文并以免费形式上传于网络被捕。
 + **2013**年1月自杀身亡。
 
-![Aaron Swartz](assets/Aaron_Swartz.jpg)
+![Aaron Swartz](/assets/Aaron_Swartz.jpg)
 
 天才都有早逝的归途。
 
@@ -186,7 +186,7 @@ ___
 添加图片的形式和链接相似，只需在链接的基础上前方加一个`!`。
 例如前面那张照片的代码：
 ```markdown
-![Aaron Swartz](assets/Aaron_Swartz.jpg)
+![Aaron Swartz](/assets/Aaron_Swartz.jpg)
 ```
 
 #3 4.10 反斜杠 \\
