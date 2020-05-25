@@ -1,5 +1,49 @@
 (function () {
+  /**
+   * Converts a colon formatted string to a object with properties.
+   *
+   * This is process a provided string and look for any tokens in the format
+   * of `:name[=value]` and then convert it to a object and return.
+   * An example of this is ':include :type=code :fragment=demo' is taken and
+   * then converted to:
+   *
+   * ```
+   * {
+   *  include: '',
+   *  type: 'code',
+   *  fragment: 'demo'
+   * }
+   * ```
+   *
+   * @param {string}   str   The string to parse.
+   *
+   * @return {object}  The original string and parsed object, { str, config }.
+   */
+  function getAndRemoveConfig(str) {
+    if ( str === void 0 ) str = '';
+
+    var config = {};
+
+    if (str) {
+      str = str
+        .replace(/^'/, '')
+        .replace(/'$/, '')
+        .replace(/(?:^|\s):([\w-]+:?)=?([\w-%]+)?/g, function (m, key, value) {
+          if (key.indexOf(':') === -1) {
+            config[key] = (value && value.replace(/&quot;/g, '')) || true;
+            return '';
+          }
+
+          return m;
+        })
+        .trim();
+    }
+
+    return { str: str, config: config };
+  }
+
   /* eslint-disable no-unused-vars */
+
   var INDEXS = {};
 
   var LOCAL_STORAGE = {
@@ -68,8 +112,17 @@
 
     tokens.forEach(function (token) {
       if (token.type === 'heading' && token.depth <= depth) {
-        slug = router.toURL(path, { id: slugify(escapeHtml(token.text)) });
-        index[slug] = { slug: slug, title: token.text, body: '' };
+        var ref = getAndRemoveConfig(token.text);
+        var str = ref.str;
+        var config = ref.config;
+
+        if (config.id) {
+          slug = router.toURL(path, { id: slugify(config.id) });
+        } else {
+          slug = router.toURL(path, { id: slugify(escapeHtml(token.text)) });
+        }
+
+        index[slug] = { slug: slug, title: str, body: '' };
       } else {
         if (!slug) {
           return;
@@ -223,7 +276,7 @@
   var options;
 
   function style() {
-    var code = "\n.sidebar {\n  padding-top: 0;\n}\n\n.search {\n  margin-bottom: 20px;\n  padding: 6px;\n  border-bottom: 1px solid #eee;\n}\n\n.search .input-wrap {\n  display: flex;\n  align-items: center;\n}\n\n.search .results-panel {\n  display: none;\n}\n\n.search .results-panel.show {\n  display: block;\n}\n\n.search input {\n  outline: none;\n  border: none;\n  width: 100%;\n  padding: 0 7px;\n  line-height: 36px;\n  font-size: 14px;\n  border: 1px solid transparent;\n}\n\n.search input:focus {\n  box-shadow: 0 0 5px var(--theme-color, #42b983);\n  border: 1px solid var(--theme-color, #42b983);\n}\n\n.search input::-webkit-search-decoration,\n.search input::-webkit-search-cancel-button,\n.search input {\n  -webkit-appearance: none;\n  -moz-appearance: none;\n  appearance: none;\n}\n.search .clear-button {\n  width: 36px;\n  text-align: right;\n  display: none;\n}\n\n.search .clear-button.show {\n  display: block;\n}\n\n.search .clear-button svg {\n  transform: scale(.5);\n}\n\n.search h2 {\n  font-size: 17px;\n  margin: 10px 0;\n}\n\n.search a {\n  text-decoration: none;\n  color: inherit;\n}\n\n.search .matching-post {\n  border-bottom: 1px solid #eee;\n}\n\n.search .matching-post:last-child {\n  border-bottom: 0;\n}\n\n.search p {\n  font-size: 14px;\n  overflow: hidden;\n  text-overflow: ellipsis;\n  display: -webkit-box;\n  -webkit-line-clamp: 2;\n  -webkit-box-orient: vertical;\n}\n\n.search p.empty {\n  text-align: center;\n}\n\n.app-name.hide, .sidebar-nav.hide {\n  display: none;\n}";
+    var code = "\n.sidebar {\n  padding-top: 0;\n}\n\n.search {\n  margin-bottom: 20px;\n  padding: 6px;\n  border-bottom: 1px solid #eee;\n}\n\n.search .input-wrap {\n  display: flex;\n  align-items: center;\n}\n\n.search .results-panel {\n  display: none;\n}\n\n.search .results-panel.show {\n  display: block;\n}\n\n.search input {\n  outline: none;\n  border: none;\n  width: 100%;\n  padding: 0 7px;\n  line-height: 36px;\n  font-size: 14px;\n  border: 1px solid transparent;\n}\n\n.search input:focus {\n  box-shadow: 0 0 5px var(--theme-color, #42b983);\n  border: 1px solid var(--theme-color, #42b983);\n}\n\n.search input::-webkit-search-decoration,\n.search input::-webkit-search-cancel-button,\n.search input {\n  -webkit-appearance: none;\n  -moz-appearance: none;\n  appearance: none;\n}\n.search .clear-button {\n  cursor: pointer;\n  width: 36px;\n  text-align: right;\n  display: none;\n}\n\n.search .clear-button.show {\n  display: block;\n}\n\n.search .clear-button svg {\n  transform: scale(.5);\n}\n\n.search h2 {\n  font-size: 17px;\n  margin: 10px 0;\n}\n\n.search a {\n  text-decoration: none;\n  color: inherit;\n}\n\n.search .matching-post {\n  border-bottom: 1px solid #eee;\n}\n\n.search .matching-post:last-child {\n  border-bottom: 0;\n}\n\n.search p {\n  font-size: 14px;\n  overflow: hidden;\n  text-overflow: ellipsis;\n  display: -webkit-box;\n  -webkit-line-clamp: 2;\n  -webkit-box-orient: vertical;\n}\n\n.search p.empty {\n  text-align: center;\n}\n\n.app-name.hide, .sidebar-nav.hide {\n  display: none;\n}";
 
     Docsify.dom.style(code);
   }
@@ -281,11 +334,19 @@
     var $inputWrap = Docsify.dom.find($search, '.input-wrap');
 
     var timeId;
-    // Prevent to Fold sidebar
+
+    /**
+      Prevent to Fold sidebar.
+
+      When searching on the mobile end,
+      the sidebar is collapsed when you click the INPUT box,
+      making it impossible to search.
+     */
     Docsify.dom.on(
       $search,
       'click',
-      function (e) { return e.target.tagName !== 'A' && e.stopPropagation(); }
+      function (e) { return ['A', 'H2', 'P', 'EM'].indexOf(e.target.tagName) === -1 &&
+        e.stopPropagation(); }
     );
     Docsify.dom.on($input, 'input', function (e) {
       clearTimeout(timeId);

@@ -7,7 +7,7 @@
 #2 2. *谁*创造了它？
 它由 [**Aaron Swartz**](http://www.aaronsw.com/) 和 **John Gruber** 共同设计， **Aaron Swartz** 就是那位于去年（*2013年1月11日*）自杀、有着**开挂**一般人生经历的程序员。维基百科对他的[介绍](http://zh.wikipedia.org/wiki/%E4%BA%9A%E4%BC%A6%C2%B7%E6%96%AF%E6%B2%83%E8%8C%A8)是：**软件工程师、作家、政治组织者、互联网活动家、维基百科人**。
 
-他有着足以让你跪拜的人生经历：
+他有着令人扼腕的人生经历：
 + **14岁**参与 RSS 1.0 规格标准的制订。
 + **2004**年入读**斯坦福**，之后退学。
 + **2005**年创建 [Infogami](http://infogami.org/) ，之后与 [Reddit](http://www.reddit.com/) 合并成为其合伙人。

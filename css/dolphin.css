@@ -1917,6 +1917,9 @@ body.close .content {
 .current span {
   color: #c94922;
 }
+.app-name-link img {
+  max-height: 3em;
+}
 @-webkit-keyframes octocat-wave {
   0%, 100% {
     transform: rotate(0);
@@ -1945,6 +1948,7 @@ section.cover {
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
+  width: 100vw;
   display: none;
 }
 section.cover.show {
