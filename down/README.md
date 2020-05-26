@@ -4,12 +4,15 @@
 
 #2 最新版本
 
-* 2020-05-09
-[kepan-docsify.4.11.3.9.zip](https://kepan.org/docsify/down/kepan-docsify.4.11.3.9.zip)
+* 2020-05-26
+[kepan-docsify.4.11.3.10.zip](https://kepan.org/docsify/down/kepan-docsify.4.11.3.10.zip)
 
-    * Docsify 官方代码更新了一些内容，我跟进了这些更新。另外侧边栏有小小的优化，一个条目如果没有子节点，前面就不显示 '+/-' 图标。
+    * Docsify 官方代码更新了一些内容，我跟进了这些更新，其它没做什么改动。这个月的主要精力用来开发[在线转换工具](https://kepan.org/convert) 。
 
 #2 尚待改进
+> * 2020-05-26
+希望增加侧边栏可以左右拖动调整大小的功能。以及侧边栏状态记忆，记忆住侧边栏每个条目的打开和关闭状态。
+
 > * 2020-05-09
 Kepan Docsify 的设计目标，是尽量把侧边栏的阅读体验，做得跟 Word 、 PDF 基本一致。因为大家都非常习惯 Word 和 PDF 的阅读体验了，只是 Word 只支持九级标题， PDF 实际上是支持无限级标题的，只是似乎一直没有被好好利用，让大家误以为 PDF 也只能支持六级或九级标题。
 
@@ -29,6 +32,11 @@ Kepan Docsify 的设计目标，是尽量把侧边栏的阅读体验，做得跟
     * https://gitee.com/pinsa/kepan-docsify
 
 #2 历史版本
+
+* 2020-05-09
+[kepan-docsify.4.11.3.9.zip](https://kepan.org/docsify/down/kepan-docsify.4.11.3.9.zip)
+
+    * Docsify 官方代码更新了一些内容，我跟进了这些更新。另外侧边栏有小小的优化，一个条目如果没有子节点，前面就不显示 '+/-' 图标。
 
 * 2020-04-26
 [kepan-docsify.4.11.3.8.zip](https://kepan.org/docsify/down/kepan-docsify.4.11.3.8.zip)
