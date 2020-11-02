@@ -97,6 +97,25 @@
     return paths;
   }
 
+  function getTableData(token) {
+    if (!token.text && token.type === 'table') {
+      token.cells.unshift(token.header);
+      token.text = token.cells
+        .map(function(rows) {
+          return rows.join(' | ');
+        })
+        .join(' |\n ');
+    }
+    return token.text;
+  }
+
+  function getListData(token) {
+    if (!token.text && token.type === 'list') {
+      token.text = token.raw;
+    }
+    return token.text;
+  }
+
   function saveData(maxAge, expireKey, indexKey) {
     localStorage.setItem(expireKey, Date.now() + maxAge);
     localStorage.setItem(indexKey, JSON.stringify(INDEXS));
@@ -131,17 +150,13 @@
         if (!index[slug]) {
           index[slug] = { slug: slug, title: '', body: '' };
         } else if (index[slug].body) {
+          token.text = getTableData(token);
+          token.text = getListData(token);
+
           index[slug].body += '\n' + (token.text || '');
         } else {
-          if (!token.text) {
-            if (token.type === 'table') {
-              token.text = token.cells
-                .map(function(rows) {
-                  return rows.join(' | ');
-                })
-                .join(' |\n ');
-            }
-          }
+          token.text = getTableData(token);
+          token.text = getListData(token);
 
           index[slug].body = index[slug].body
             ? index[slug].body + token.text
@@ -211,7 +226,10 @@
               '...' +
               escapeHtml(postContent)
                 .substring(start, end)
-                .replace(regEx, ("<em class=\"search-keyword\">" + keyword + "</em>")) +
+                .replace(
+                  regEx,
+                  function (word) { return ("<em class=\"search-keyword\">" + word + "</em>"); }
+                ) +
               '...';
 
             resultStr += matchContent;
@@ -238,9 +256,32 @@
 
   function init(config, vm) {
     var isAuto = config.paths === 'auto';
+    var paths = isAuto ? getAllPaths(vm.router) : config.paths;
 
-    var expireKey = resolveExpireKey(config.namespace);
-    var indexKey = resolveIndexKey(config.namespace);
+    var namespaceSuffix = '';
+
+    // only in auto mode
+    if (paths.length && isAuto && config.pathNamespaces) {
+      var path = paths[0];
+
+      if (Array.isArray(config.pathNamespaces)) {
+        namespaceSuffix =
+          config.pathNamespaces.find(function (prefix) { return path.startsWith(prefix); }) ||
+          namespaceSuffix;
+      } else if (config.pathNamespaces instanceof RegExp) {
+        var matches = path.match(config.pathNamespaces);
+
+        if (matches) {
+          namespaceSuffix = matches[0];
+        }
+      }
+      paths.unshift(namespaceSuffix + '/');
+    } else {
+      paths.unshift('/');
+    }
+
+    var expireKey = resolveExpireKey(config.namespace) + namespaceSuffix;
+    var indexKey = resolveIndexKey(config.namespace) + namespaceSuffix;
 
     var isExpired = localStorage.getItem(expireKey) < Date.now();
 
@@ -252,7 +293,6 @@
       return;
     }
 
-    var paths = isAuto ? getAllPaths(vm.router) : config.paths;
     var len = paths.length;
     var count = 0;
 
@@ -415,6 +455,7 @@
     maxAge: 86400000, // 1 day
     hideOtherSidebarContent: false,
     namespace: undefined,
+    pathNamespaces: undefined,
   };
 
   var install = function(hook, vm) {
@@ -432,6 +473,7 @@
       CONFIG.hideOtherSidebarContent =
         opts.hideOtherSidebarContent || CONFIG.hideOtherSidebarContent;
       CONFIG.namespace = opts.namespace || CONFIG.namespace;
+      CONFIG.pathNamespaces = opts.pathNamespaces || CONFIG.pathNamespaces;
     }
 
     var isAuto = CONFIG.paths === 'auto';

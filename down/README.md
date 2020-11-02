@@ -4,10 +4,20 @@
 
 #2 最新版本
 
-* 2020-05-26
-[kepan-docsify.4.11.3.10.zip](https://kepan.org/docsify/down/kepan-docsify.4.11.3.10.zip)
+* 2020-11-02
+[kepan-docsify.4.11.6.1.zip](https://kepan.org/docsify/down/kepan-docsify.4.11.6.1.zip)
 
-    * Docsify 官方代码更新了一些内容，我跟进了这些更新，其它没做什么改动。这个月的主要精力用来开发[在线转换工具](https://kepan.org/convert) 。
+    * Docsify 官方版本有了一些比较重大的更新，其中关键的一项，是吧它引用的 marked 库的版本，从 ^0.7 更新到了 ^1.1 ，也就是说，从此跟上了 marked 的最新版本。
+
+    * 因此我相应的对最新版的 marked 打了 patch 。而且呢过去修改的 marked 只支持 `#1, #2, #3` 这样的 kepan markdown 标题，不支持传统的 markdown 标题 `#, ##, ###` 了，在这次更新中，做了改进，让它同时可以支持传统的 markdown 标题和 kepan markdown 标题，这样有很多好处。
+
+    * 修改 marked 的方式，是 markdown 的标题格式本来有两种，一种叫 heading ，一种叫 lheading ，我给它加了第三种叫 kheading ，k 就是 kepan 的首字母，现在这三种标题格式可以共存。
+
+    * 但是 marked 还有个设置，就是 pedantic 模式，它是传统的、原始的 markdown 模式，我并没有把 kheading 的支持加入进去，所以如果 pedantic 模式打开时，不会支持 `#1, #2, #3` 格式的标题。
+
+    * 这次我对 kepan docsify 的侧边栏也做了关键变更，侧边栏的折叠和展开不再是跟随主页面全自动展开折叠，而是手动点击标题旁边的箭头来折叠和展开。今后 kepan docsify 的操作方式将会向 pdf 、 word 那种传统方式看齐。
+
+    * 目前来说 kepan docsify 还剩下一个关键的待解决问题，就是为用户记录每个节点的折叠和展开状态，甚至记录上次浏览到的位置。
 
 #2 尚待改进
 > * 2020-05-26
@@ -32,6 +42,11 @@ Kepan Docsify 的设计目标，是尽量把侧边栏的阅读体验，做得跟
     * https://gitee.com/pinsa/kepan-docsify
 
 #2 历史版本
+
+* 2020-05-26
+[kepan-docsify.4.11.3.10.zip](https://kepan.org/docsify/down/kepan-docsify.4.11.3.10.zip)
+
+    * Docsify 官方代码更新了一些内容，我跟进了这些更新，其它没做什么改动。这个月的主要精力用来开发[在线转换工具](https://kepan.org/convert) 。
 
 * 2020-05-09
 [kepan-docsify.4.11.3.9.zip](https://kepan.org/docsify/down/kepan-docsify.4.11.3.9.zip)
